@@ -95,7 +95,11 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
                 setting this to true will evaluate with CVXPYLayers instead 
                 (to avoid requiring a Gurobi license)
         """
-        super(NeuralCLBFController, self).__init__(
+        # Initialize LightningModule and CLFController separately due to
+        # PyTorch Lightning >= 2.0 not accepting arbitrary kwargs in __init__
+        pl.LightningModule.__init__(self)
+        CLFController.__init__(
+            self,
             dynamics_model=dynamics_model,
             scenarios=scenarios,
             experiment_suite=experiment_suite,
@@ -124,6 +128,8 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
         self.epochs_per_episode = epochs_per_episode
         self.penalty_scheduling_rate = penalty_scheduling_rate
         self.num_init_epochs = num_init_epochs
+        self._train_step_outputs = []
+        self._val_step_outputs = []
         self.barrier = barrier
         self.add_nominal = add_nominal
         self.normalize_V_nominal = normalize_V_nominal
@@ -716,15 +722,15 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
         # print("total_loss", total_loss)
         
         batch_dict = {"loss": total_loss, **component_losses}
-
+        self._train_step_outputs.append(batch_dict)
         return batch_dict
 
-    def training_epoch_end(self, outputs):
+    def on_train_epoch_end(self):
         """This function is called after every epoch is completed."""
-        # Outputs contains a list for each optimizer, and we need to collect the losses
-        # from all of them if there is a nested list
-        if isinstance(outputs[0], list):
-            outputs = itertools.chain(*outputs)
+        outputs = self._train_step_outputs
+        self._train_step_outputs = []
+        if not outputs:
+            return
 
         # Gather up all of the losses for each component from all batches
         losses = {}
@@ -781,50 +787,71 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
         )
 
         batch_dict = {"val_loss": total_loss, **component_losses}
-
+        self._val_step_outputs.append(batch_dict)
         return batch_dict
 
-    def validation_epoch_end(self, outputs):
-        """This function is called after every epoch is completed."""
-        # Gather up all of the losses for each component from all batches
-        losses = {}
-        for batch_output in outputs:
-            for key in batch_output.keys():
-                # if we've seen this key before, add this component loss to the list
-                if key in losses:
-                    losses[key].append(batch_output[key])
-                else:
-                    # otherwise, make a new list
-                    losses[key] = [batch_output[key]]
+    def on_validation_epoch_end(self):
+        """This function is called after every validation epoch is completed."""
+        outputs = self._val_step_outputs
+        self._val_step_outputs = []
+        if outputs:
+            # Gather up all of the losses for each component from all batches
+            losses = {}
+            for batch_output in outputs:
+                for key in batch_output.keys():
+                    if key in losses:
+                        losses[key].append(batch_output[key])
+                    else:
+                        losses[key] = [batch_output[key]]
 
-        # Average all the losses
-        avg_losses = {}
-        for key in losses.keys():
-            key_losses = torch.stack(losses[key])
-            avg_losses[key] = torch.nansum(key_losses) / key_losses.shape[0]
+            # Average all the losses
+            avg_losses = {}
+            for key in losses.keys():
+                key_losses = torch.stack(losses[key])
+                avg_losses[key] = torch.nansum(key_losses) / key_losses.shape[0]
 
-        # Log the overall loss...
-        self.log("Total loss / val", avg_losses["val_loss"], sync_dist=True)
-        # And all component losses
-        for loss_key in avg_losses.keys():
-            # We already logged overall loss, so skip that here
-            if loss_key == "val_loss":
-                continue
-            # Log the other losses
-            self.log(loss_key + " / val", avg_losses[loss_key], sync_dist=True)
+            # Log the overall loss...
+            self.log("Total loss / val", avg_losses["val_loss"], sync_dist=True)
+            # And all component losses
+            for loss_key in avg_losses.keys():
+                if loss_key == "val_loss":
+                    continue
+                self.log(loss_key + " / val", avg_losses[loss_key], sync_dist=True)
 
-        # **Now entering spicetacular automation zone**
-        # We automatically run experiments every few epochs
+            # Only plot every 5 epochs
+            if self.current_epoch % 5 == 0:
+                self.experiment_suite.run_all_and_log_plots(
+                    self, self.logger, self.current_epoch
+                )
 
-        # Only plot every 5 epochs
-        if self.current_epoch % 5 != 0:
-            return
+        # Generate new data at the end of every episode
+        if self.current_epoch > 0 and self.current_epoch % self.epochs_per_episode == 0:
+            if self.penalty_scheduling_rate > 0:
+                relaxation_penalty = (
+                    self.clf_relaxation_penalty
+                    * self.current_epoch
+                    / self.penalty_scheduling_rate
+                )
+            else:
+                relaxation_penalty = self.clf_relaxation_penalty
 
-        self.experiment_suite.run_all_and_log_plots(
-            self, self.logger, self.current_epoch
-        )
+            def simulator_fn_wrapper(x_init: torch.Tensor, num_steps: int):
+                return self.simulator_fn(
+                    x_init,
+                    num_steps,
+                    relaxation_penalty=relaxation_penalty,
+                )
 
-    @pl.core.decorators.auto_move_data
+            self.datamodule.add_data(simulator_fn_wrapper)
+
+    try:
+        _auto_move = pl.core.decorators.auto_move_data
+    except AttributeError:
+        # PyTorch Lightning >= 2.0 moved/removed this decorator
+        def _auto_move(fn):
+            return fn
+
+    @_auto_move
     def simulator_fn(
         self,
         x_init: torch.Tensor,
@@ -846,30 +873,6 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
             controller_period=self.controller_period,
             params=random_scenario,
         )
-
-    def on_validation_epoch_end(self):
-        """This function is called at the end of every validation epoch"""
-        # We want to generate new data at the end of every episode
-        if self.current_epoch > 0 and self.current_epoch % self.epochs_per_episode == 0:
-            if self.penalty_scheduling_rate > 0:
-                relaxation_penalty = (
-                    self.clf_relaxation_penalty
-                    * self.current_epoch
-                    / self.penalty_scheduling_rate
-                )
-            else:
-                relaxation_penalty = self.clf_relaxation_penalty
-
-            # Use the models simulation function with this controller
-            
-            def simulator_fn_wrapper(x_init: torch.Tensor, num_steps: int):
-                return self.simulator_fn(
-                    x_init,
-                    num_steps,
-                    relaxation_penalty=relaxation_penalty,
-                )
-
-            self.datamodule.add_data(simulator_fn_wrapper)
 
     def configure_optimizers(self):
         clbf_params = list(self.V_nn.parameters())

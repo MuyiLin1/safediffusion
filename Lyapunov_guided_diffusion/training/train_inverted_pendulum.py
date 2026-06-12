@@ -35,7 +35,7 @@ start_x = torch.tensor(
 simulation_dt = 0.01
 
 
-def main(args):
+def main(args=None):
     # Define the scenarios
     nominal_params = {"m": 1.0, "L": 1.0, "b": 0.01}
     scenarios = [
@@ -117,10 +117,8 @@ def main(args):
         "logs/inverted_pendulum",
         name=f"commit_{current_git_hash()}",
     )
-    trainer = pl.Trainer.from_argparse_args(
-        args,
+    trainer = pl.Trainer(
         logger=tb_logger,
-        reload_dataloaders_every_epoch=True,
         max_epochs=51,
     )
 
@@ -130,8 +128,4 @@ def main(args):
 
 
 if __name__ == "__main__":
-    parser = ArgumentParser()
-    parser = pl.Trainer.add_argparse_args(parser)
-    args = parser.parse_args()
-
-    main(args)
+    main(None)

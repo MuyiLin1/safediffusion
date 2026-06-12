@@ -27,5 +27,8 @@ casadi
 # Geometry
 shapely
 
+# SINDYc dynamics identification
+pysindy
+
 # Freeze versions to avoid bugs
 setuptools==59.5.0

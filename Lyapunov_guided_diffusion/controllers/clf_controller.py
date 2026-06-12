@@ -2,8 +2,12 @@ from typing import Tuple, Optional, Union
 
 import cvxpy as cp
 from cvxpylayers.torch import CvxpyLayer
-import gurobipy as gp
-from gurobipy import GRB
+try:
+    import gurobipy as gp
+    from gurobipy import GRB
+    HAS_GUROBI = True
+except ImportError:
+    HAS_GUROBI = False
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -349,9 +353,12 @@ class CLFController(Controller):
         params.append(u_ref)
         params.append(torch.tensor([relaxation_penalty]).type_as(x))
 
+        # cvxpylayers requires CPU tensors (numpy backend)
+        params_cpu = [p.cpu() for p in params]
+
         # We've already created a parameterized QP solver, so we can use that
         result = self.differentiable_qp_solver(
-            *params,
+            *params_cpu,
             solver_args={"max_iters": 1000},
         )
 

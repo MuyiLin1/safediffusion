@@ -9,7 +9,10 @@ from matplotlib.pyplot import figure
 import matplotlib.pyplot as plt
 import matplotlib
 import pandas as pd
-from pytorch_lightning.loggers import LightningLoggerBase
+try:
+    from pytorch_lightning.loggers import LightningLoggerBase
+except ImportError:
+    from pytorch_lightning.loggers import Logger as LightningLoggerBase
 
 from .experiment import Experiment
 

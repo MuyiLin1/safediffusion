@@ -10,7 +10,6 @@ import tqdm
 import numpy as np
 
 from neural_clbf.experiments import Experiment
-from neural_clbf.systems.planar_lidar_system import Scene
 
 if TYPE_CHECKING:
     from neural_clbf.controllers import Controller, NeuralObsBFController  # noqa
@@ -75,6 +74,8 @@ class RolloutSuccessRateExperiment(Experiment):
         for sim_idx in prog_bar_range:
             # Generate a random environment
             if hasattr(controller_under_test.dynamics_model, "scene"):
+                from neural_clbf.systems.planar_lidar_system import Scene
+
                 room_size = 10.0
                 num_obstacles = 8
                 box_size_range = (0.75, 1.75)
