@@ -1,0 +1,175 @@
+
+================================================================================
+== diff_sig0.2_s0
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.752 tailmaxV=0.8568 tau_hat=0.001664 c=1.003 (92s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.333 tau_hat=0.001664 c=1.003 (87s)
+  delta_c env=4.858 true=0.3347 env_valid=1 kappa=0.000583 total 180s
+
+================================================================================
+== diff_sig0.2_s1
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.754 tailmaxV=0.827 tau_hat=0.005457 c=1.005 (126s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.5258 tau_hat=0.005457 c=1.005 (118s)
+  delta_c env=4.939 true=0.1169 env_valid=1 kappa=0.000576 total 245s
+
+================================================================================
+== diff_sig0.2_s2
+================================================================================
+  diffusion         safe_box=1.00 safe_V=0.97 cert_frac=0.765 tailmaxV=0.6573 tau_hat=0.001368 c=1.021 (127s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3345 tau_hat=0.001368 c=1.021 (118s)
+  delta_c env=4.88 true=0.1434 env_valid=1 kappa=0.000585 total 246s
+
+================================================================================
+== diff_sig0.2_s3
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.755 tailmaxV=0.494 tau_hat=0.001388 c=1.006 (127s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.2939 tau_hat=0.001388 c=1.006 (119s)
+  delta_c env=5.047 true=0.2264 env_valid=1 kappa=0.000562 total 246s
+
+================================================================================
+== diff_sig0.2_s4
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.751 tailmaxV=0.7496 tau_hat=0.001894 c=1.003 (127s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3377 tau_hat=0.001894 c=1.003 (119s)
+  delta_c env=4.872 true=0.4074 env_valid=1 kappa=0.000577 total 247s
+
+================================================================================
+== diff_sig0.5_s0
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.754 tailmaxV=0.5411 tau_hat=0.01257 c=1.003 (128s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.6471 tau_hat=0.01257 c=1.003 (119s)
+  delta_c env=8.378 true=0.7462 env_valid=1 kappa=0.000583 total 247s
+
+================================================================================
+== diff_sig0.5_s1
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.742 tailmaxV=0.5771 tau_hat=0.02196 c=1.005 (128s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.385 tau_hat=0.02196 c=1.005 (118s)
+  delta_c env=8.526 true=0.2204 env_valid=1 kappa=0.000576 total 247s
+
+================================================================================
+== diff_sig0.5_s2
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.740 tailmaxV=0.4802 tau_hat=0.0158 c=1.021 (121s)
+  diffusion_filter  safe_box=1.00 safe_V=0.97 cert_frac=1.000 tailmaxV=0.5688 tau_hat=0.0158 c=1.021 (132s)
+  delta_c env=8.418 true=0.3804 env_valid=1 kappa=0.000585 total 255s
+
+================================================================================
+== diff_sig0.5_s3
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.748 tailmaxV=0.6542 tau_hat=0.01662 c=1.006 (121s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.2649 tau_hat=0.01662 c=1.006 (132s)
+  delta_c env=8.7 true=0.5207 env_valid=1 kappa=0.000562 total 254s
+
+================================================================================
+== diff_sig0.5_s4
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.737 tailmaxV=0.6908 tau_hat=0.02038 c=1.003 (133s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3449 tau_hat=0.02038 c=1.003 (115s)
+  delta_c env=8.407 true=1.023 env_valid=1 kappa=0.000577 total 248s
+
+================================================================================
+== diff_sig0_s0
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.758 tailmaxV=0.5375 tau_hat=0.0007537 c=1.003 (127s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3701 tau_hat=0.0007537 c=1.003 (120s)
+  delta_c env=2.511 true=0.06281 env_valid=1 kappa=0.000583 total 248s
+
+================================================================================
+== diff_sig0_s1
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.763 tailmaxV=0.6093 tau_hat=0.001445 c=1.005 (127s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.5868 tau_hat=0.001445 c=1.005 (119s)
+  delta_c env=2.548 true=0.06458 env_valid=1 kappa=0.000576 total 247s
+
+================================================================================
+== diff_sig0_s2
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.763 tailmaxV=0.5457 tau_hat=0.0006212 c=1.021 (90s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.4224 tau_hat=0.0006212 c=1.021 (88s)
+  delta_c env=2.521 true=0.06338 env_valid=1 kappa=0.000585 total 179s
+
+================================================================================
+== diff_sig0_s3
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.751 tailmaxV=0.4711 tau_hat=0.000703 c=1.006 (128s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3301 tau_hat=0.000703 c=1.006 (117s)
+  delta_c env=2.612 true=0.06682 env_valid=1 kappa=0.000562 total 246s
+
+================================================================================
+== diff_sig0_s4
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.762 tailmaxV=0.8668 tau_hat=0.0009499 c=1.003 (126s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.8892 tau_hat=0.0009499 c=1.003 (119s)
+  delta_c env=2.515 true=0.06331 env_valid=1 kappa=0.000577 total 246s
+
+================================================================================
+== diff_sig1_s0
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.737 tailmaxV=0.6041 tau_hat=1.002 c=1.003 (132s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3218 tau_hat=1.002 c=1.003 (115s)
+  delta_c env=14.25 true=1.432 env_valid=1 kappa=0.000583 total 248s
+
+================================================================================
+== diff_sig1_s1
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.741 tailmaxV=0.7422 tau_hat=1.002 c=1.005 (132s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3679 tau_hat=1.002 c=1.005 (115s)
+  delta_c env=14.5 true=0.4039 env_valid=1 kappa=0.000576 total 249s
+
+================================================================================
+== diff_sig1_s2
+================================================================================
+  diffusion         safe_box=1.00 safe_V=0.97 cert_frac=0.735 tailmaxV=0.4487 tau_hat=1.02 c=1.021 (133s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.2952 tau_hat=1.02 c=1.021 (114s)
+  delta_c env=14.31 true=0.784 env_valid=1 kappa=0.000585 total 248s
+
+================================================================================
+== diff_sig1_s3
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.738 tailmaxV=0.4194 tau_hat=1.006 c=1.006 (132s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.6019 tau_hat=1.006 c=1.006 (115s)
+  delta_c env=14.79 true=1.018 env_valid=1 kappa=0.000562 total 248s
+
+================================================================================
+== diff_sig1_s4
+================================================================================
+  diffusion         safe_box=1.00 safe_V=0.97 cert_frac=0.719 tailmaxV=1.221 tau_hat=1.002 c=1.003 (132s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3096 tau_hat=1.002 c=1.003 (114s)
+  delta_c env=14.3 true=2.054 env_valid=1 kappa=0.000577 total 247s
+
+================================================================================
+== diff_sig2_s0
+================================================================================
+  diffusion         safe_box=1.00 safe_V=0.97 cert_frac=0.549 tailmaxV=0.5405 tau_hat=1.003 c=1.003 (132s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.1271 tau_hat=1.003 c=1.003 (115s)
+  delta_c env=25.98 true=2.805 env_valid=1 kappa=0.000583 total 248s
+
+================================================================================
+== diff_sig2_s1
+================================================================================
+  diffusion         safe_box=1.00 safe_V=0.97 cert_frac=0.677 tailmaxV=0.8933 tau_hat=1.004 c=1.005 (132s)
+  diffusion_filter  safe_box=1.00 safe_V=0.97 cert_frac=1.000 tailmaxV=0.3189 tau_hat=1.004 c=1.005 (115s)
+  delta_c env=26.46 true=0.7776 env_valid=1 kappa=0.000576 total 248s
+
+================================================================================
+== diff_sig2_s2
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.647 tailmaxV=0.5128 tau_hat=1.021 c=1.021 (131s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.6761 tau_hat=1.021 c=1.021 (116s)
+  delta_c env=26.11 true=1.594 env_valid=1 kappa=0.000585 total 248s
+
+================================================================================
+== diff_sig2_s3
+================================================================================
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.583 tailmaxV=0.5109 tau_hat=1.006 c=1.006 (132s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.1979 tau_hat=1.006 c=1.006 (115s)
+  delta_c env=26.96 true=2.016 env_valid=1 kappa=0.000562 total 248s
+
+================================================================================
+== diff_sig2_s4
+================================================================================
+  diffusion         safe_box=1.00 safe_V=0.97 cert_frac=0.680 tailmaxV=0.463 tau_hat=1.003 c=1.003 (90s)
+  diffusion_filter  safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3527 tau_hat=1.003 c=1.003 (75s)
+  delta_c env=26.08 true=4.117 env_valid=1 kappa=0.000577 total 166s

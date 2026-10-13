@@ -1,0 +1,75 @@
+
+================================================================================
+== cert_s0
+================================================================================
+/Users/linmuyi/code/safediffusion/Lyapunov_guided_diffusion/sindy/robust_certificate.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+  stats = {"loss": float(loss), "L_dec": float(L_dec), "L_level": float(L_lvl),
+    [cert robust] it     0 loss=0.209 L_dec=0.1226 L_level=0.00864 L_size=0 viol_frac=0.1424 (0s)
+    [cert robust] it   500 loss=2.13e-05 L_dec=2.13e-05 L_level=0 L_size=0 viol_frac=0.002587 (5s)
+    [cert robust] it  1000 loss=4.363e-05 L_dec=4.363e-05 L_level=0 L_size=0 viol_frac=0.007519 (10s)
+    [cert robust] it  1500 loss=0.0001236 L_dec=9.548e-07 L_level=1.226e-05 L_size=0 viol_frac=0.001206 (14s)
+    [cert robust] it  2000 loss=1.59e-06 L_dec=1.59e-06 L_level=0 L_size=0 viol_frac=0.001321 (19s)
+    [cert robust] it  2500 loss=0 L_dec=0 L_level=0 L_size=0 viol_frac=0 (24s)
+    [cert robust] it  3000 loss=0 L_dec=0 L_level=0 L_size=0 viol_frac=0 (28s)
+saved learned certificate -> data/theory_learned/cert/cert_seed0.pt (29s)
+
+================================================================================
+== cert_s1
+================================================================================
+/Users/linmuyi/code/safediffusion/Lyapunov_guided_diffusion/sindy/robust_certificate.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+  stats = {"loss": float(loss), "L_dec": float(L_dec), "L_level": float(L_lvl),
+    [cert robust] it     0 loss=1.01 L_dec=0.3219 L_level=0.0688 L_size=0 viol_frac=0.2083 (0s)
+    [cert robust] it   500 loss=5.215e-05 L_dec=4.706e-05 L_level=5.097e-07 L_size=0 viol_frac=0.003667 (5s)
+    [cert robust] it  1000 loss=4.275e-05 L_dec=4.275e-05 L_level=0 L_size=0 viol_frac=0.005063 (10s)
+    [cert robust] it  1500 loss=1.714e-05 L_dec=1.714e-05 L_level=0 L_size=0 viol_frac=0.001206 (15s)
+    [cert robust] it  2000 loss=0 L_dec=0 L_level=0 L_size=0 viol_frac=0 (19s)
+    [cert robust] it  2500 loss=1.916e-05 L_dec=1.916e-05 L_level=0 L_size=0 viol_frac=0.003764 (24s)
+    [cert robust] it  3000 loss=1.032e-05 L_dec=1.032e-05 L_level=0 L_size=0 viol_frac=0.00246 (29s)
+saved learned certificate -> data/theory_learned/cert/cert_seed1.pt (29s)
+
+================================================================================
+== cert_s2
+================================================================================
+/Users/linmuyi/code/safediffusion/Lyapunov_guided_diffusion/sindy/robust_certificate.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+  stats = {"loss": float(loss), "L_dec": float(L_dec), "L_level": float(L_lvl),
+    [cert robust] it     0 loss=0.7524 L_dec=0.04372 L_level=0.07087 L_size=0 viol_frac=0.07407 (0s)
+    [cert robust] it   500 loss=2.321e-05 L_dec=2.321e-05 L_level=0 L_size=0 viol_frac=0.003802 (5s)
+    [cert robust] it  1000 loss=7.184e-06 L_dec=7.184e-06 L_level=0 L_size=0 viol_frac=0.001326 (10s)
+    [cert robust] it  1500 loss=1.627e-05 L_dec=1.627e-05 L_level=0 L_size=0 viol_frac=0.002494 (15s)
+    [cert robust] it  2000 loss=2.104e-05 L_dec=2.104e-05 L_level=0 L_size=0 viol_frac=0.002667 (19s)
+    [cert robust] it  2500 loss=0 L_dec=0 L_level=0 L_size=0 viol_frac=0 (24s)
+    [cert robust] it  3000 loss=0 L_dec=0 L_level=0 L_size=0 viol_frac=0 (29s)
+saved learned certificate -> data/theory_learned/cert/cert_seed2.pt (30s)
+
+================================================================================
+== cert_s3
+================================================================================
+/Users/linmuyi/code/safediffusion/Lyapunov_guided_diffusion/sindy/robust_certificate.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+  stats = {"loss": float(loss), "L_dec": float(L_dec), "L_level": float(L_lvl),
+    [cert robust] it     0 loss=0.43 L_dec=0.04423 L_level=0.03857 L_size=0 viol_frac=0.1037 (0s)
+    [cert robust] it   500 loss=5.9e-05 L_dec=5.9e-05 L_level=0 L_size=0 viol_frac=0.005869 (5s)
+    [cert robust] it  1000 loss=2.465e-05 L_dec=2.465e-05 L_level=0 L_size=0 viol_frac=0.003788 (10s)
+    [cert robust] it  1500 loss=1.757e-05 L_dec=1.757e-05 L_level=0 L_size=0 viol_frac=0.004884 (15s)
+    [cert robust] it  2000 loss=3.977e-06 L_dec=3.977e-06 L_level=0 L_size=0 viol_frac=0.001335 (19s)
+    [cert robust] it  2500 loss=8.408e-06 L_dec=8.408e-06 L_level=0 L_size=0 viol_frac=0.003529 (24s)
+    [cert robust] it  3000 loss=6.92e-06 L_dec=6.92e-06 L_level=0 L_size=0 viol_frac=0.001211 (29s)
+saved learned certificate -> data/theory_learned/cert/cert_seed3.pt (29s)
+
+================================================================================
+== cert_s4
+================================================================================
+/Users/linmuyi/code/safediffusion/Lyapunov_guided_diffusion/sindy/robust_certificate.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:837.)
+  stats = {"loss": float(loss), "L_dec": float(L_dec), "L_level": float(L_lvl),
+    [cert robust] it     0 loss=0.3671 L_dec=0.1546 L_level=0.02126 L_size=0 viol_frac=0.1585 (0s)
+    [cert robust] it   500 loss=6.896e-05 L_dec=6.896e-05 L_level=0 L_size=0 viol_frac=0.00534 (5s)
+    [cert robust] it  1000 loss=4.02e-05 L_dec=4.02e-05 L_level=0 L_size=0 viol_frac=0.003984 (10s)
+    [cert robust] it  1500 loss=6.394e-06 L_dec=6.394e-06 L_level=0 L_size=0 viol_frac=0.00128 (14s)
+    [cert robust] it  2000 loss=3.828e-06 L_dec=3.828e-06 L_level=0 L_size=0 viol_frac=0.002378 (19s)
+    [cert robust] it  2500 loss=0 L_dec=0 L_level=0 L_size=0 viol_frac=0 (24s)
+    [cert robust] it  3000 loss=2.418e-05 L_dec=2.418e-05 L_level=0 L_size=0 viol_frac=0.003667 (28s)
+saved learned certificate -> data/theory_learned/cert/cert_seed4.pt (29s)

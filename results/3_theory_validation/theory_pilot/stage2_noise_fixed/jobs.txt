@@ -1,0 +1,1 @@
+0 sig0.5_s0 0 --mode fixed --ref_v data/theory_pilot/ref_v/ref_seed0.pt --library bias --sigma 0.5 --seed 0 --num_trajectories 50 --num_rollouts 30 --t_sim 10 --policies qp qp_filter diffusion diffusion_filter

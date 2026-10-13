@@ -1,0 +1,16 @@
+delta=0.005 (a) grid 2.777e-04 formula 2.778e-04 | (b) limV/tau = 0.360
+delta=0.010 (a) grid 1.111e-03 formula 1.111e-03 | (b) limV/tau = 0.360
+delta=0.020 (a) grid 4.444e-03 formula 4.444e-03 | (b) limV/tau = 0.360
+delta=0.050 (a) grid 2.778e-02 formula 2.778e-02 | (b) limV/tau = 0.360
+delta=0.100 (a) grid 1.111e-01 formula 1.111e-01 | (b) limV/tau = 0.360
+delta=0.200 (a) grid 4.444e-01 formula 4.444e-01 | (b) limV/tau = 0.360
+delta=0.300 (a) grid 1.000e+00 formula 1.000e+00 | (b) limV/tau = 0.360
+N=   10 lower=1.56e-03 mean=2.47e-02 upper=4.94e-01 below_upper=1.000 cover=1.000
+N=   20 lower=7.81e-04 mean=1.28e-02 upper=2.60e-01 below_upper=1.000 cover=1.000
+N=   50 lower=3.13e-04 mean=4.91e-03 upper=1.11e-01 below_upper=1.000 cover=1.000
+N=  100 lower=1.56e-04 mean=2.45e-03 upper=5.81e-02 below_upper=1.000 cover=1.000
+N=  200 lower=7.81e-05 mean=1.25e-03 upper=3.03e-02 below_upper=1.000 cover=1.000
+N=  500 lower=3.13e-05 mean=4.92e-04 upper=1.28e-02 below_upper=1.000 cover=1.000
+N= 1000 lower=1.56e-05 mean=2.49e-04 upper=6.66e-03 below_upper=1.000 cover=1.000
+N= 2000 lower=7.81e-06 mean=1.27e-04 upper=3.45e-03 below_upper=1.000 cover=1.000
+N= 5000 lower=3.13e-06 mean=5.08e-05 upper=1.45e-03 below_upper=1.000 cover=1.000

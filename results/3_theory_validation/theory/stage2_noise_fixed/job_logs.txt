@@ -1,0 +1,271 @@
+
+================================================================================
+== sig0.1_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.7289 tau_hat=0.766 c=0.7661 (15s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.60 safe_V=0.53 cert_frac=1.000 tailmaxV=0.7303 tau_hat=0.766 c=0.7661 (13s)
+  delta_c env=3.511 true=0.1921 env_valid=1 kappa=0.000583 total 30s
+
+================================================================================
+== sig0.1_s1
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8287 vs c=0.8278, |K_c| grid points=0
+
+================================================================================
+== sig0.1_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.7714 tau_hat=0.7876 c=0.7876 (13s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.67 safe_V=0.50 cert_frac=1.000 tailmaxV=0.7735 tau_hat=0.7876 c=0.7876 (15s)
+  delta_c env=3.489 true=0.06584 env_valid=1 kappa=0.000585 total 31s
+
+================================================================================
+== sig0.1_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.8212 tau_hat=0.8516 c=0.8517 (12s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.67 safe_V=0.63 cert_frac=1.000 tailmaxV=0.8229 tau_hat=0.8516 c=0.8517 (14s)
+  delta_c env=3.588 true=0.1242 env_valid=1 kappa=0.000562 total 30s
+
+================================================================================
+== sig0.1_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=0.97 cert_frac=0.000 tailmaxV=0.8264 tau_hat=0.848 c=0.8481 (13s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.60 safe_V=0.50 cert_frac=1.000 tailmaxV=0.8282 tau_hat=0.848 c=0.8481 (14s)
+  delta_c env=3.531 true=0.206 env_valid=1 kappa=0.000577 total 29s
+
+================================================================================
+== sig0.2_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.7289 tau_hat=0.7665 c=0.7666 (13s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.87 safe_V=0.87 cert_frac=1.000 tailmaxV=0.7296 tau_hat=0.7665 c=0.7666 (14s)
+  delta_c env=4.629 true=0.3251 env_valid=1 kappa=0.000583 total 30s
+
+================================================================================
+== sig0.2_s1
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8287 vs c=0.8278, |K_c| grid points=0
+
+================================================================================
+== sig0.2_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=0.97 cert_frac=0.000 tailmaxV=0.7712 tau_hat=0.7873 c=0.7874 (13s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.70 safe_V=0.67 cert_frac=1.000 tailmaxV=0.7715 tau_hat=0.7873 c=0.7874 (15s)
+  delta_c env=4.6 true=0.09973 env_valid=1 kappa=0.000585 total 31s
+
+================================================================================
+== sig0.2_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=0.97 cert_frac=0.000 tailmaxV=0.8215 tau_hat=0.8527 c=0.8528 (14s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.43 safe_V=0.40 cert_frac=1.000 tailmaxV=0.8218 tau_hat=0.8527 c=0.8528 (17s)
+  delta_c env=4.747 true=0.214 env_valid=1 kappa=0.000562 total 33s
+
+================================================================================
+== sig0.2_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.8263 tau_hat=0.8461 c=0.8462 (15s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.57 safe_V=0.57 cert_frac=1.000 tailmaxV=0.8274 tau_hat=0.8461 c=0.8462 (15s)
+  delta_c env=4.656 true=0.405 env_valid=1 kappa=0.000577 total 33s
+
+================================================================================
+== sig0.5_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.729 tau_hat=0.768 c=0.768 (16s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.63 safe_V=0.63 cert_frac=1.000 tailmaxV=0.7286 tau_hat=0.768 c=0.768 (16s)
+  delta_c env=7.984 true=0.7247 env_valid=1 kappa=0.000583 total 34s
+
+================================================================================
+== sig0.5_s1
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8287 vs c=0.8278, |K_c| grid points=0
+
+================================================================================
+== sig0.5_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.7707 tau_hat=0.7866 c=0.7866 (15s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.40 safe_V=0.40 cert_frac=1.000 tailmaxV=0.7695 tau_hat=0.7866 c=0.7866 (17s)
+  delta_c env=7.905 true=0.2784 env_valid=1 kappa=0.000585 total 35s
+
+================================================================================
+== sig0.5_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=0.93 cert_frac=0.000 tailmaxV=0.8229 tau_hat=0.8563 c=0.8564 (15s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.57 safe_V=0.50 cert_frac=1.000 tailmaxV=0.8205 tau_hat=0.8563 c=0.8564 (16s)
+  delta_c env=8.215 true=0.5013 env_valid=1 kappa=0.000562 total 34s
+
+================================================================================
+== sig0.5_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=0.93 cert_frac=nan tailmaxV=0.8263 tau_hat=0.8409 c=0.841 (14s)
+  qp_filter         safe_box=0.53 safe_V=0.47 cert_frac=nan tailmaxV=0.8267 tau_hat=0.8409 c=0.841 (16s)
+  delta_c env=8.004 true=1.014 env_valid=1 kappa=0.000577 total 33s
+
+================================================================================
+== sig0_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.7288 tau_hat=0.7656 c=0.7656 (14s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.43 safe_V=0.40 cert_frac=1.000 tailmaxV=0.7319 tau_hat=0.7656 c=0.7656 (13s)
+  delta_c env=2.393 true=0.06025 env_valid=1 kappa=0.000583 total 30s
+
+================================================================================
+== sig0_s1
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8287 vs c=0.8278, |K_c| grid points=0
+
+================================================================================
+== sig0_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.7716 tau_hat=0.7878 c=0.7878 (11s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.50 safe_V=0.30 cert_frac=1.000 tailmaxV=0.7778 tau_hat=0.7878 c=0.7878 (6s)
+  delta_c env=2.377 true=0.05995 env_valid=1 kappa=0.000585 total 21s
+
+================================================================================
+== sig0_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.821 tau_hat=0.8506 c=0.8506 (14s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.67 safe_V=0.47 cert_frac=1.000 tailmaxV=0.8251 tau_hat=0.8506 c=0.8506 (13s)
+  delta_c env=2.447 true=0.06272 env_valid=1 kappa=0.000562 total 30s
+
+================================================================================
+== sig0_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=0.93 cert_frac=0.000 tailmaxV=0.8265 tau_hat=0.8501 c=0.8501 (13s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.57 safe_V=0.43 cert_frac=1.000 tailmaxV=0.8305 tau_hat=0.8501 c=0.8501 (14s)
+  delta_c env=2.405 true=0.06092 env_valid=1 kappa=0.000577 total 30s
+
+================================================================================
+== sig1_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.7293 tau_hat=0.7706 c=0.7706 (15s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.50 safe_V=0.50 cert_frac=1.000 tailmaxV=0.7282 tau_hat=0.7706 c=0.7706 (14s)
+  delta_c env=13.58 true=1.391 env_valid=1 kappa=0.000583 total 32s
+
+================================================================================
+== sig1_s1
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8287 vs c=0.8278, |K_c| grid points=0
+
+================================================================================
+== sig1_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.77 tau_hat=0.7853 c=0.7854 (15s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.57 safe_V=0.50 cert_frac=1.000 tailmaxV=0.7686 tau_hat=0.7853 c=0.7854 (14s)
+  delta_c env=13.44 true=0.5779 env_valid=1 kappa=0.000585 total 32s
+
+================================================================================
+== sig1_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=0.93 cert_frac=0.000 tailmaxV=0.8317 tau_hat=0.8635 c=0.8635 (15s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.57 safe_V=0.53 cert_frac=1.000 tailmaxV=0.8199 tau_hat=0.8635 c=0.8635 (14s)
+  delta_c env=14.02 true=0.991 env_valid=1 kappa=0.000562 total 32s
+
+================================================================================
+== sig1_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=0.97 cert_frac=nan tailmaxV=0.8262 tau_hat=0.8336 c=0.8336 (11s)
+  qp_filter         safe_box=0.47 safe_V=0.27 cert_frac=nan tailmaxV=0.8264 tau_hat=0.8336 c=0.8336 (11s)
+  delta_c env=13.56 true=2.023 env_valid=1 kappa=0.000577 total 25s
+
+================================================================================
+== sig2_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.7304 tau_hat=0.7762 c=0.7762 (11s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.63 safe_V=0.63 cert_frac=nan tailmaxV=0.728 tau_hat=0.7762 c=0.7762 (11s)
+  delta_c env=24.75 true=2.721 env_valid=1 kappa=0.000583 total 24s
+
+================================================================================
+== sig2_s1
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8287 vs c=0.8278, |K_c| grid points=0
+
+================================================================================
+== sig2_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=0.97 cert_frac=nan tailmaxV=0.7693 tau_hat=0.7826 c=0.7827 (11s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.57 safe_V=0.37 cert_frac=nan tailmaxV=0.7681 tau_hat=0.7826 c=0.7827 (10s)
+  delta_c env=24.42 true=1.175 env_valid=1 kappa=0.000585 total 23s
+
+================================================================================
+== sig2_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=0.20 cert_frac=nan tailmaxV=2.546 tau_hat=0.8875 c=0.8876 (11s)
+  qp_filter         safe_box=0.43 safe_V=0.43 cert_frac=1.000 tailmaxV=0.8195 tau_hat=0.8875 c=0.8876 (9s)
+  delta_c env=26.15 true=2.018 env_valid=1 kappa=0.000562 total 23s
+
+================================================================================
+== sig2_s4
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8269 vs c=0.8261, |K_c| grid points=0
+
+================================================================================
+== sig4_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=0.97 cert_frac=nan tailmaxV=0.7914 tau_hat=0.7913 c=0.7914 (9s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.7278 tau_hat=0.7913 c=0.7914 (7s)
+  delta_c env=47.31 true=5.406 env_valid=1 kappa=0.000583 total 18s
+
+================================================================================
+== sig4_s1
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8287 vs c=0.8278, |K_c| grid points=0
+
+================================================================================
+== sig4_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=0.93 cert_frac=nan tailmaxV=0.7686 tau_hat=0.7766 c=0.7766 (7s)
+  qp_filter         safe_box=1.00 safe_V=0.90 cert_frac=nan tailmaxV=0.7679 tau_hat=0.7766 c=0.7766 (7s)
+  delta_c env=46.29 true=2.366 env_valid=1 kappa=0.000585 total 16s
+
+================================================================================
+== sig4_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.8194 tau_hat=1.08 c=1.08 (7s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.8193 tau_hat=1.08 c=1.08 (7s)
+  delta_c env=44.19 true=3.388 env_valid=1 kappa=0.000562 total 16s
+
+================================================================================
+== sig4_s4
+================================================================================
+  invalid certificate, no theorem applies: V(goal)=0.8269 vs c=0.8261, |K_c| grid points=0

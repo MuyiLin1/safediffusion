@@ -1,0 +1,40 @@
+================================================================
+ Parallel SINDy sweep
+   python     = /Users/linmuyi/code/.venv/bin/python
+   parallel   = 6 processes x 2 threads each
+   seeds      = 0 1 2
+   noise grid = 0.0 0.02 0.05 0.1 0.15 0.2 0.3
+   max_epochs = 30   rollouts=100  t_sim=10.0
+   parts dir  = data/parts    merged -> data/sweep_results.csv
+================================================================
+Total configs:       21
+[start] noise=0.0 seed=0 -> data/parts/part_0.0_0.csv
+[start] noise=0.0 seed=1 -> data/parts/part_0.0_1.csv
+[start] noise=0.02 seed=0 -> data/parts/part_0.02_0.csv
+[start] noise=0.02 seed=1 -> data/parts/part_0.02_1.csv
+[start] noise=0.02 seed=2 -> data/parts/part_0.02_2.csv
+[start] noise=0.0 seed=2 -> data/parts/part_0.0_2.csv
+[FAIL ] noise=0.02 seed=1 (no row; see data/parts/log_0.02_1.log)
+[start] noise=0.05 seed=0 -> data/parts/part_0.05_0.csv
+[FAIL ] noise=0.05 seed=0 (no row; see data/parts/log_0.05_0.log)
+[start] noise=0.05 seed=1 -> data/parts/part_0.05_1.csv
+[FAIL ] noise=0.02 seed=2 (no row; see data/parts/log_0.02_2.log)
+[start] noise=0.05 seed=2 -> data/parts/part_0.05_2.csv
+[FAIL ] noise=0.05 seed=1 (no row; see data/parts/log_0.05_1.log)
+[start] noise=0.1 seed=0 -> data/parts/part_0.1_0.csv
+[FAIL ] noise=0.05 seed=2 (no row; see data/parts/log_0.05_2.log)
+[start] noise=0.1 seed=1 -> data/parts/part_0.1_1.csv
+[FAIL ] noise=0.1 seed=0 (no row; see data/parts/log_0.1_0.log)
+[start] noise=0.1 seed=2 -> data/parts/part_0.1_2.csv
+[FAIL ] noise=0.1 seed=1 (no row; see data/parts/log_0.1_1.log)
+[start] noise=0.15 seed=0 -> data/parts/part_0.15_0.csv
+[FAIL ] noise=0.15 seed=0 (no row; see data/parts/log_0.15_0.log)
+[start] noise=0.15 seed=1 -> data/parts/part_0.15_1.csv
+[FAIL ] noise=0.1 seed=2 (no row; see data/parts/log_0.1_2.log)
+[start] noise=0.15 seed=2 -> data/parts/part_0.15_2.csv
+[FAIL ] noise=0.15 seed=1 (no row; see data/parts/log_0.15_1.log)
+[start] noise=0.2 seed=0 -> data/parts/part_0.2_0.csv
+[FAIL ] noise=0.2 seed=0 (no row; see data/parts/log_0.2_0.log)
+[start] noise=0.2 seed=1 -> data/parts/part_0.2_1.csv
+[FAIL ] noise=0.15 seed=2 (no row; see data/parts/log_0.15_2.log)
+[start] noise=0.2 seed=2 -> data/parts/part_0.2_2.csv

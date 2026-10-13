@@ -1,0 +1,120 @@
+
+================================================================================
+== cp_res_sig0.1_s0
+================================================================================
+    [netcert robust] it 0 loss=0.2041 dec=0 lvl=0 size=2.04 (0s)
+    [netcert robust] it 2000 loss=0.009734 dec=0.00477 lvl=0.000149 size=0.0347 (24s)
+    [netcert robust] it 4000 loss=0.005457 dec=0.00276 lvl=6.69e-05 size=0.0203 (55s)
+    [netcert robust] it 6000 loss=0.004926 dec=0.00125 lvl=9.42e-05 size=0.0273 (88s)
+  lqr          safe=1.00 maxV/c=0.995 tail=2.35e-05 tau_hat=0.882 ult_h=0.884 decay_ok=1 c=0.884 (1s)
+  lqr_filter   safe=0.73 maxV/c=2.440 tail=0.915 tau_hat=0.882 ult_h=0.884 decay_ok=0 c=0.884 (2s)
+  lqr_dfilter  safe=1.00 maxV/c=0.995 tail=0.00664 tau_hat=0.882 ult_h=0.884 decay_ok=1 c=0.884 (11s)
+total 356s
+
+================================================================================
+== cp_res_sig0.1_s1
+================================================================================
+    [netcert robust] it 0 loss=0.1986 dec=0 lvl=0 size=1.99 (0s)
+    [netcert robust] it 2000 loss=0.00741 dec=0.00286 lvl=0.000103 size=0.0352 (128s)
+    [netcert robust] it 4000 loss=0.004757 dec=0.00215 lvl=2.74e-05 size=0.0234 (185s)
+    [netcert robust] it 6000 loss=0.003846 dec=0.000919 lvl=7.73e-05 size=0.0215 (235s)
+  lqr          safe=1.00 maxV/c=0.989 tail=3.93e-05 tau_hat=0.896 ult_h=0.902 decay_ok=1 c=0.902 (1s)
+  lqr_filter   safe=0.67 maxV/c=2.696 tail=0.137 tau_hat=0.896 ult_h=0.902 decay_ok=0 c=0.902 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.989 tail=0.891 tau_hat=0.896 ult_h=0.902 decay_ok=1 c=0.902 (15s)
+total 427s
+
+================================================================================
+== cp_res_sig0.1_s2
+================================================================================
+    [netcert robust] it 0 loss=0.1887 dec=0 lvl=0 size=1.89 (0s)
+    [netcert robust] it 2000 loss=0.005652 dec=0.00149 lvl=4.29e-05 size=0.0373 (48s)
+    [netcert robust] it 4000 loss=0.003863 dec=5.17e-05 lvl=6.58e-05 size=0.0315 (103s)
+    [netcert robust] it 6000 loss=0.002826 dec=0.000292 lvl=5.98e-05 size=0.0194 (154s)
+  lqr          safe=1.00 maxV/c=0.994 tail=3.37e-05 tau_hat=0.88 ult_h=0.892 decay_ok=1 c=0.892 (1s)
+  lqr_filter   safe=0.70 maxV/c=2.283 tail=0.291 tau_hat=0.88 ult_h=0.892 decay_ok=0 c=0.892 (2s)
+  lqr_dfilter  safe=1.00 maxV/c=0.994 tail=0.00409 tau_hat=0.88 ult_h=0.892 decay_ok=1 c=0.892 (15s)
+total 329s
+
+================================================================================
+== cp_res_sig0.1_s3
+================================================================================
+    [netcert robust] it 0 loss=0.2094 dec=0 lvl=0 size=2.09 (0s)
+    [netcert robust] it 2000 loss=0.01199 dec=0.00714 lvl=2.53e-05 size=0.0459 (48s)
+    [netcert robust] it 4000 loss=0.00531 dec=0.00082 lvl=0.000218 size=0.0231 (105s)
+    [netcert robust] it 6000 loss=0.007107 dec=0.00328 lvl=0.000146 size=0.0237 (165s)
+  lqr          safe=0.87 maxV/c=1.664 tail=4.93e-05 tau_hat=0.891 ult_h=0.896 decay_ok=- c=0.892 (0s)
+  lqr_filter   safe=0.80 maxV/c=11.069 tail=9.88 tau_hat=0.891 ult_h=0.896 decay_ok=- c=0.892 (0s)
+  lqr_dfilter  safe=0.80 maxV/c=11.069 tail=9.88 tau_hat=0.891 ult_h=0.896 decay_ok=- c=0.892 (4s)
+total 324s
+
+================================================================================
+== cp_res_sig0.1_s4
+================================================================================
+    [netcert robust] it 0 loss=0.1878 dec=0 lvl=0 size=1.88 (0s)
+    [netcert robust] it 2000 loss=0.005639 dec=0.00135 lvl=4.03e-05 size=0.0389 (39s)
+    [netcert robust] it 4000 loss=0.005955 dec=0.00041 lvl=7.19e-05 size=0.0483 (66s)
+    [netcert robust] it 6000 loss=0.00255 dec=0 lvl=3.98e-05 size=0.0215 (82s)
+  lqr          safe=1.00 maxV/c=0.996 tail=2.54e-05 tau_hat=0.867 ult_h=0.881 decay_ok=1 c=0.881 (0s)
+  lqr_filter   safe=0.80 maxV/c=3.031 tail=0.189 tau_hat=0.867 ult_h=0.881 decay_ok=0 c=0.881 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.996 tail=0.0135 tau_hat=0.867 ult_h=0.881 decay_ok=1 c=0.881 (3s)
+total 141s
+
+================================================================================
+== cp_res_sig0_s0
+================================================================================
+    [netcert robust] it 0 loss=0.204 dec=0 lvl=0 size=2.04 (0s)
+    [netcert robust] it 2000 loss=0.007159 dec=0.0022 lvl=0.000106 size=0.039 (24s)
+    [netcert robust] it 4000 loss=0.002666 dec=0 lvl=6.03e-05 size=0.0206 (52s)
+    [netcert robust] it 6000 loss=0.00448 dec=0.00115 lvl=0.000105 size=0.0228 (83s)
+  lqr          safe=1.00 maxV/c=0.993 tail=3.88e-05 tau_hat=0.881 ult_h=0.893 decay_ok=1 c=0.893 (2s)
+  lqr_filter   safe=0.63 maxV/c=6.724 tail=6 tau_hat=0.881 ult_h=0.893 decay_ok=0 c=0.893 (2s)
+  lqr_dfilter  safe=1.00 maxV/c=0.993 tail=0.0184 tau_hat=0.881 ult_h=0.893 decay_ok=1 c=0.893 (15s)
+total 341s
+
+================================================================================
+== cp_res_sig0_s1
+================================================================================
+    [netcert robust] it 0 loss=0.1983 dec=0 lvl=0 size=1.98 (0s)
+    [netcert robust] it 2000 loss=0.0043 dec=0.00021 lvl=6.93e-05 size=0.034 (131s)
+    [netcert robust] it 4000 loss=0.00226 dec=0.000127 lvl=8.28e-05 size=0.013 (203s)
+    [netcert robust] it 6000 loss=0.00368 dec=0.0013 lvl=8.06e-05 size=0.0157 (255s)
+  lqr          safe=0.77 maxV/c=1.262 tail=4.52e-05 tau_hat=0.894 ult_h=0.911 decay_ok=0 c=0.912 (1s)
+  lqr_filter   safe=0.40 maxV/c=6.761 tail=6.16 tau_hat=0.894 ult_h=0.911 decay_ok=0 c=0.912 (1s)
+  lqr_dfilter  safe=0.67 maxV/c=1.016 tail=0.927 tau_hat=0.894 ult_h=0.911 decay_ok=0 c=0.912 (13s)
+total 430s
+
+================================================================================
+== cp_res_sig0_s2
+================================================================================
+    [netcert robust] it 0 loss=0.1893 dec=0 lvl=0 size=1.89 (0s)
+    [netcert robust] it 2000 loss=0.003643 dec=0.000426 lvl=2.45e-05 size=0.0297 (48s)
+    [netcert robust] it 4000 loss=0.003483 dec=0.00109 lvl=4.8e-05 size=0.0192 (102s)
+    [netcert robust] it 6000 loss=0.003181 dec=0.000766 lvl=5.23e-05 size=0.0189 (156s)
+  lqr          safe=1.00 maxV/c=0.987 tail=3.6e-05 tau_hat=0.904 ult_h=0.907 decay_ok=1 c=0.908 (1s)
+  lqr_filter   safe=0.77 maxV/c=2.459 tail=0.234 tau_hat=0.904 ult_h=0.907 decay_ok=0 c=0.908 (2s)
+  lqr_dfilter  safe=1.00 maxV/c=0.987 tail=0.662 tau_hat=0.904 ult_h=0.907 decay_ok=1 c=0.908 (13s)
+total 326s
+
+================================================================================
+== cp_res_sig0_s3
+================================================================================
+    [netcert robust] it 0 loss=0.2102 dec=0 lvl=0 size=2.1 (0s)
+    [netcert robust] it 2000 loss=0.00563 dec=0.00124 lvl=2.52e-05 size=0.0414 (46s)
+    [netcert robust] it 4000 loss=0.00387 dec=0.00156 lvl=1.39e-05 size=0.0217 (101s)
+    [netcert robust] it 6000 loss=0.003286 dec=0.000213 lvl=8.18e-05 size=0.0225 (162s)
+  lqr          safe=1.00 maxV/c=0.990 tail=3.28e-05 tau_hat=0.899 ult_h=0.9 decay_ok=1 c=0.9 (0s)
+  lqr_filter   safe=0.80 maxV/c=10.773 tail=9.7 tau_hat=0.899 ult_h=0.9 decay_ok=0 c=0.9 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.990 tail=0.00485 tau_hat=0.899 ult_h=0.9 decay_ok=1 c=0.9 (5s)
+total 328s
+
+================================================================================
+== cp_res_sig0_s4
+================================================================================
+    [netcert robust] it 0 loss=0.1881 dec=0 lvl=0 size=1.88 (0s)
+    [netcert robust] it 2000 loss=0.01228 dec=0.00922 lvl=1.98e-05 size=0.0287 (39s)
+    [netcert robust] it 4000 loss=0.003079 dec=0 lvl=5.14e-05 size=0.0257 (66s)
+    [netcert robust] it 6000 loss=0.003927 dec=0.00204 lvl=4.83e-05 size=0.014 (82s)
+  lqr          safe=0.83 maxV/c=1.414 tail=4.41e-05 tau_hat=0.874 ult_h=0.889 decay_ok=0 c=0.89 (0s)
+  lqr_filter   safe=0.57 maxV/c=19.620 tail=17.5 tau_hat=0.874 ult_h=0.889 decay_ok=0 c=0.89 (0s)
+  lqr_dfilter  safe=0.80 maxV/c=1.221 tail=1.09 tau_hat=0.874 ult_h=0.889 decay_ok=0 c=0.89 (3s)
+total 142s

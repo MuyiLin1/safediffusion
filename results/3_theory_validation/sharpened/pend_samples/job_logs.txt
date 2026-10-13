@@ -1,0 +1,240 @@
+
+================================================================================
+== pend_quad_n100_s0
+================================================================================
+  lqr          safe=1.00 maxV/c=0.998 tail=1.85e-20 tau_hat=0.148 ult_h=0.655 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.998 tail=0.0441 tau_hat=0.148 ult_h=0.655 decay_ok=1 c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.998 tail=0.000572 tau_hat=0.148 ult_h=0.655 decay_ok=1 c=0.66 (1s)
+total 10s
+
+================================================================================
+== pend_quad_n100_s1
+================================================================================
+  lqr          safe=1.00 maxV/c=0.963 tail=7.4e-17 tau_hat=0.039 ult_h=0.655 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.963 tail=0.0266 tau_hat=0.039 ult_h=0.655 decay_ok=1 c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.963 tail=0.000569 tau_hat=0.039 ult_h=0.655 decay_ok=1 c=0.66 (1s)
+total 15s
+
+================================================================================
+== pend_quad_n100_s2
+================================================================================
+  lqr          safe=1.00 maxV/c=0.972 tail=7.03e-19 tau_hat=0.0458 ult_h=0.655 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.972 tail=0.0122 tau_hat=0.0458 ult_h=0.655 decay_ok=1 c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.972 tail=0.000573 tau_hat=0.0458 ult_h=0.655 decay_ok=1 c=0.66 (2s)
+total 24s
+
+================================================================================
+== pend_quad_n100_s3
+================================================================================
+  lqr          safe=1.00 maxV/c=0.918 tail=1.13e-19 tau_hat=0.0537 ult_h=0.655 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.918 tail=0.0624 tau_hat=0.0537 ult_h=0.655 decay_ok=1 c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.918 tail=0.000593 tau_hat=0.0537 ult_h=0.655 decay_ok=1 c=0.66 (2s)
+total 26s
+
+================================================================================
+== pend_quad_n100_s4
+================================================================================
+  lqr          safe=1.00 maxV/c=0.971 tail=4.1e-21 tau_hat=0.0458 ult_h=0.655 decay_ok=1 c=0.66 (1s)
+  lqr_filter   safe=1.00 maxV/c=0.971 tail=0.0198 tau_hat=0.0458 ult_h=0.655 decay_ok=1 c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.971 tail=0.000585 tau_hat=0.0458 ult_h=0.655 decay_ok=1 c=0.66 (3s)
+total 49s
+
+================================================================================
+== pend_quad_n10_s0
+================================================================================
+  lqr          safe=1.00 maxV/c=0.998 tail=1.04e-18 tau_hat=0.655 ult_h=1.07 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.998 tail=0.00089 tau_hat=0.655 ult_h=1.07 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.998 tail=0.00126 tau_hat=0.655 ult_h=1.07 decay_ok=- c=0.66 (1s)
+total 12s
+
+================================================================================
+== pend_quad_n10_s1
+================================================================================
+  lqr          safe=1.00 maxV/c=0.963 tail=5.2e-17 tau_hat=0.655 ult_h=1.03 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.963 tail=0.000769 tau_hat=0.655 ult_h=1.03 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.963 tail=0.00129 tau_hat=0.655 ult_h=1.03 decay_ok=- c=0.66 (1s)
+total 13s
+
+================================================================================
+== pend_quad_n10_s2
+================================================================================
+  lqr          safe=1.00 maxV/c=0.972 tail=1.55e-20 tau_hat=0.655 ult_h=1.28 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.972 tail=0.00159 tau_hat=0.655 ult_h=1.28 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.972 tail=0.00128 tau_hat=0.655 ult_h=1.28 decay_ok=- c=0.66 (3s)
+total 28s
+
+================================================================================
+== pend_quad_n10_s3
+================================================================================
+  lqr          safe=1.00 maxV/c=0.918 tail=9.75e-17 tau_hat=0.655 ult_h=1.21 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.918 tail=0.000875 tau_hat=0.655 ult_h=1.21 decay_ok=- c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.918 tail=0.00145 tau_hat=0.655 ult_h=1.21 decay_ok=- c=0.66 (3s)
+total 31s
+
+================================================================================
+== pend_quad_n10_s4
+================================================================================
+  lqr          safe=1.00 maxV/c=0.971 tail=6.87e-17 tau_hat=0.655 ult_h=1.29 decay_ok=- c=0.66 (1s)
+  lqr_filter   safe=1.00 maxV/c=0.971 tail=0.00165 tau_hat=0.655 ult_h=1.29 decay_ok=- c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.971 tail=0.00122 tau_hat=0.655 ult_h=1.29 decay_ok=- c=0.66 (4s)
+total 46s
+
+================================================================================
+== pend_quad_n200_s0
+================================================================================
+  lqr          safe=1.00 maxV/c=0.998 tail=1.88e-20 tau_hat=0.0183 ult_h=0.303 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.998 tail=0.0056 tau_hat=0.0183 ult_h=0.303 decay_ok=1 c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.998 tail=0.000512 tau_hat=0.0183 ult_h=0.303 decay_ok=1 c=0.66 (1s)
+total 11s
+
+================================================================================
+== pend_quad_n200_s1
+================================================================================
+  lqr          safe=1.00 maxV/c=0.963 tail=2.61e-20 tau_hat=0.0113 ult_h=0.106 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.963 tail=0.027 tau_hat=0.0113 ult_h=0.106 decay_ok=1 c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.963 tail=0.000507 tau_hat=0.0113 ult_h=0.106 decay_ok=1 c=0.66 (1s)
+total 16s
+
+================================================================================
+== pend_quad_n200_s2
+================================================================================
+  lqr          safe=1.00 maxV/c=0.972 tail=7.17e-21 tau_hat=0.0159 ult_h=0.226 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.972 tail=0.518 tau_hat=0.0159 ult_h=0.226 decay_ok=0 c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.972 tail=0.000489 tau_hat=0.0159 ult_h=0.226 decay_ok=1 c=0.66 (2s)
+total 24s
+
+================================================================================
+== pend_quad_n200_s3
+================================================================================
+  lqr          safe=1.00 maxV/c=0.918 tail=2.71e-18 tau_hat=0.0149 ult_h=0.226 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.918 tail=0.0229 tau_hat=0.0149 ult_h=0.226 decay_ok=1 c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.918 tail=0.000488 tau_hat=0.0149 ult_h=0.226 decay_ok=1 c=0.66 (2s)
+total 26s
+
+================================================================================
+== pend_quad_n200_s4
+================================================================================
+  lqr          safe=1.00 maxV/c=0.971 tail=1.08e-22 tau_hat=0.0173 ult_h=0.331 decay_ok=1 c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.971 tail=0.0381 tau_hat=0.0173 ult_h=0.331 decay_ok=1 c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.971 tail=0.000502 tau_hat=0.0173 ult_h=0.331 decay_ok=1 c=0.66 (4s)
+total 41s
+
+================================================================================
+== pend_quad_n20_s0
+================================================================================
+  lqr          safe=1.00 maxV/c=0.998 tail=1.42e-18 tau_hat=0.655 ult_h=0.806 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=0.97 maxV/c=1.155 tail=0.0915 tau_hat=0.655 ult_h=0.806 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.998 tail=0.00101 tau_hat=0.655 ult_h=0.806 decay_ok=- c=0.66 (1s)
+total 13s
+
+================================================================================
+== pend_quad_n20_s1
+================================================================================
+  lqr          safe=1.00 maxV/c=0.963 tail=4.11e-16 tau_hat=0.655 ult_h=0.751 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.963 tail=0.0222 tau_hat=0.655 ult_h=0.751 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.963 tail=0.00109 tau_hat=0.655 ult_h=0.751 decay_ok=- c=0.66 (1s)
+total 15s
+
+================================================================================
+== pend_quad_n20_s2
+================================================================================
+  lqr          safe=1.00 maxV/c=0.972 tail=2.41e-19 tau_hat=0.655 ult_h=0.792 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=0.97 maxV/c=1.807 tail=1.19 tau_hat=0.655 ult_h=0.792 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.972 tail=0.001 tau_hat=0.655 ult_h=0.792 decay_ok=- c=0.66 (3s)
+total 28s
+
+================================================================================
+== pend_quad_n20_s3
+================================================================================
+  lqr          safe=1.00 maxV/c=0.918 tail=9.27e-23 tau_hat=0.655 ult_h=0.773 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=0.97 maxV/c=1.806 tail=0.0428 tau_hat=0.655 ult_h=0.773 decay_ok=- c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.918 tail=0.00107 tau_hat=0.655 ult_h=0.773 decay_ok=- c=0.66 (2s)
+total 31s
+
+================================================================================
+== pend_quad_n20_s4
+================================================================================
+  lqr          safe=1.00 maxV/c=0.971 tail=1.26e-21 tau_hat=0.655 ult_h=0.773 decay_ok=- c=0.66 (1s)
+  lqr_filter   safe=1.00 maxV/c=0.971 tail=0.0985 tau_hat=0.655 ult_h=0.773 decay_ok=- c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.971 tail=0.00109 tau_hat=0.655 ult_h=0.773 decay_ok=- c=0.66 (4s)
+total 47s
+
+================================================================================
+== pend_quad_n50_s0
+================================================================================
+  lqr          safe=1.00 maxV/c=0.998 tail=7.19e-18 tau_hat=0.658 ult_h=0.687 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.998 tail=0.058 tau_hat=0.658 ult_h=0.687 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.998 tail=0.000702 tau_hat=0.658 ult_h=0.687 decay_ok=- c=0.66 (1s)
+total 9s
+
+================================================================================
+== pend_quad_n50_s1
+================================================================================
+  lqr          safe=1.00 maxV/c=0.963 tail=6.26e-23 tau_hat=0.489 ult_h=0.672 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.963 tail=0.0294 tau_hat=0.489 ult_h=0.672 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.963 tail=0.000744 tau_hat=0.489 ult_h=0.672 decay_ok=- c=0.66 (1s)
+total 15s
+
+================================================================================
+== pend_quad_n50_s2
+================================================================================
+  lqr          safe=1.00 maxV/c=0.972 tail=1.92e-18 tau_hat=0.653 ult_h=0.684 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.972 tail=0.0338 tau_hat=0.653 ult_h=0.684 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.972 tail=0.000721 tau_hat=0.653 ult_h=0.684 decay_ok=- c=0.66 (2s)
+total 27s
+
+================================================================================
+== pend_quad_n50_s3
+================================================================================
+  lqr          safe=1.00 maxV/c=0.918 tail=1.94e-16 tau_hat=0.411 ult_h=0.674 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.918 tail=0.0167 tau_hat=0.411 ult_h=0.674 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.918 tail=0.000694 tau_hat=0.411 ult_h=0.674 decay_ok=- c=0.66 (2s)
+total 27s
+
+================================================================================
+== pend_quad_n50_s4
+================================================================================
+  lqr          safe=1.00 maxV/c=0.971 tail=7.58e-21 tau_hat=0.594 ult_h=0.677 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.971 tail=0.0578 tau_hat=0.594 ult_h=0.677 decay_ok=- c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.971 tail=0.000758 tau_hat=0.594 ult_h=0.677 decay_ok=- c=0.66 (4s)
+total 46s
+
+================================================================================
+== pend_quad_n5_s0
+================================================================================
+  lqr          safe=1.00 maxV/c=0.998 tail=2.4e-19 tau_hat=0.655 ult_h=1.65 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=0.97 maxV/c=1.068 tail=0.0377 tau_hat=0.655 ult_h=1.65 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.998 tail=0.00146 tau_hat=0.655 ult_h=1.65 decay_ok=- c=0.66 (1s)
+total 14s
+
+================================================================================
+== pend_quad_n5_s1
+================================================================================
+  lqr          safe=1.00 maxV/c=0.963 tail=1.02e-15 tau_hat=0.655 ult_h=1.81 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.963 tail=0.0333 tau_hat=0.655 ult_h=1.81 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.963 tail=0.00143 tau_hat=0.655 ult_h=1.81 decay_ok=- c=0.66 (1s)
+total 15s
+
+================================================================================
+== pend_quad_n5_s2
+================================================================================
+  lqr          safe=1.00 maxV/c=0.973 tail=6.24e-18 tau_hat=0.658 ult_h=2.29 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.972 tail=0.00829 tau_hat=0.658 ult_h=2.29 decay_ok=- c=0.66 (0s)
+  lqr_dfilter  safe=1.00 maxV/c=0.972 tail=0.00173 tau_hat=0.658 ult_h=2.29 decay_ok=- c=0.66 (2s)
+total 28s
+
+================================================================================
+== pend_quad_n5_s3
+================================================================================
+  lqr          safe=1.00 maxV/c=0.918 tail=2.1e-19 tau_hat=0.655 ult_h=1.77 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.918 tail=0.179 tau_hat=0.655 ult_h=1.77 decay_ok=- c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.918 tail=0.00168 tau_hat=0.655 ult_h=1.77 decay_ok=- c=0.66 (2s)
+total 31s
+
+================================================================================
+== pend_quad_n5_s4
+================================================================================
+  lqr          safe=1.00 maxV/c=0.971 tail=3.71e-18 tau_hat=0.658 ult_h=2.5 decay_ok=- c=0.66 (0s)
+  lqr_filter   safe=1.00 maxV/c=0.971 tail=0.307 tau_hat=0.658 ult_h=2.5 decay_ok=- c=0.66 (1s)
+  lqr_dfilter  safe=1.00 maxV/c=0.971 tail=0.00146 tau_hat=0.658 ult_h=2.5 decay_ok=- c=0.66 (6s)
+total 45s

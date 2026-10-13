@@ -1,0 +1,1 @@
+0 ref_s0 1 --mode train_ref --ref_v data/theory_pilot/ref_v/ref_seed0.pt --seed 0 --num_trajectories 200 --max_epochs 2

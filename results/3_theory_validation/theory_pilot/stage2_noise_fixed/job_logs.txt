@@ -1,0 +1,11 @@
+
+================================================================================
+== sig0.5_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.9655 tau_hat=1.057 c=1.057 (4s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.57 safe_V=0.53 cert_frac=1.000 tailmaxV=0.9646 tau_hat=1.057 c=1.057 (6s)
+  diffusion         safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=1.031 tau_hat=1.057 c=1.057 (1460s)
+  diffusion_filter  safe_box=0.50 safe_V=0.50 cert_frac=1.000 tailmaxV=0.9646 tau_hat=1.057 c=1.057 (1640s)
+  delta_c env=8.168 true=0.7328 env_valid=1 kappa=0.000583 total 3111s

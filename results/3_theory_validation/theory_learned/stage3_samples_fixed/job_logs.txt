@@ -1,0 +1,315 @@
+
+================================================================================
+== n100_s0
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.888 tailmaxV=9.308e-05 tau_hat=0.001841 c=1.003 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=9.303e-05 tau_hat=0.001841 c=1.003 (3s)
+  delta_c env=5.966 true=0.3652 env_valid=1 kappa=0.000603 total 8s
+
+================================================================================
+== n100_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0006713 tau_hat=0.01027 c=1.005 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0006713 tau_hat=0.01027 c=1.005 (3s)
+  delta_c env=6.072 true=0.505 env_valid=1 kappa=0.000592 total 8s
+
+================================================================================
+== n100_s2
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.119 tailmaxV=1.871e-09 tau_hat=0.00492 c=1.021 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=1.203e-05 tau_hat=0.00492 c=1.021 (3s)
+  delta_c env=6.069 true=0.4273 env_valid=1 kappa=0.00058 total 8s
+
+================================================================================
+== n100_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.940 tailmaxV=1.209e-11 tau_hat=0.001486 c=1.006 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=1.208e-05 tau_hat=0.001486 c=1.006 (3s)
+  delta_c env=6.199 true=0.43 env_valid=1 kappa=0.000578 total 7s
+
+================================================================================
+== n100_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.200 tailmaxV=1.051e-06 tau_hat=0.006566 c=1.003 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=1.219e-05 tau_hat=0.006566 c=1.003 (3s)
+  delta_c env=6.071 true=0.5635 env_valid=1 kappa=0.000577 total 8s
+
+================================================================================
+== n10_s0
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.070 tailmaxV=8.703e-05 tau_hat=1.002 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0001584 tau_hat=1.002 c=1.003 (5s)
+  delta_c env=17.86 true=1.122 env_valid=1 kappa=0.000597 total 9s
+
+================================================================================
+== n10_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.997 tailmaxV=0.001686 tau_hat=1.004 c=1.005 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0007774 tau_hat=1.004 c=1.005 (5s)
+  delta_c env=17.87 true=2.326 env_valid=1 kappa=0.000591 total 10s
+
+================================================================================
+== n10_s2
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.632 tailmaxV=1.17e-11 tau_hat=1.02 c=1.021 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0003849 tau_hat=1.02 c=1.021 (4s)
+  delta_c env=17.99 true=1.799 env_valid=1 kappa=0.00056 total 8s
+
+================================================================================
+== n10_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.660 tailmaxV=1.651e-11 tau_hat=1.006 c=1.006 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0003093 tau_hat=1.006 c=1.006 (4s)
+  delta_c env=18.18 true=0.6288 env_valid=1 kappa=0.00053 total 8s
+
+================================================================================
+== n10_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.089 tailmaxV=3.363e-08 tau_hat=1.002 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0001715 tau_hat=1.002 c=1.003 (4s)
+  delta_c env=17.93 true=1.499 env_valid=1 kappa=0.000597 total 8s
+
+================================================================================
+== n200_s0
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.945 tailmaxV=9.586e-05 tau_hat=0.001545 c=1.003 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=9.586e-05 tau_hat=0.001545 c=1.003 (3s)
+  delta_c env=4.314 true=0.1396 env_valid=1 kappa=0.000604 total 8s
+
+================================================================================
+== n200_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.999 tailmaxV=0.0006674 tau_hat=0.002425 c=1.005 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0006674 tau_hat=0.002425 c=1.005 (3s)
+  delta_c env=4.347 true=0.4018 env_valid=1 kappa=0.000604 total 8s
+
+================================================================================
+== n200_s2
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.167 tailmaxV=5.254e-07 tau_hat=0.001276 c=1.021 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=9.23e-06 tau_hat=0.001276 c=1.021 (3s)
+  delta_c env=4.387 true=0.3891 env_valid=1 kappa=0.000578 total 8s
+
+================================================================================
+== n200_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.867 tailmaxV=1.026e-11 tau_hat=0.001251 c=1.006 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=9.002e-06 tau_hat=0.001251 c=1.006 (3s)
+  delta_c env=4.439 true=0.641 env_valid=1 kappa=0.000585 total 8s
+
+================================================================================
+== n200_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.206 tailmaxV=1.284e-10 tau_hat=0.001779 c=1.003 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=9.328e-06 tau_hat=0.001779 c=1.003 (3s)
+  delta_c env=4.34 true=0.4069 env_valid=1 kappa=0.000586 total 8s
+
+================================================================================
+== n20_s0
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.424 tailmaxV=8.998e-05 tau_hat=1.002 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=8.965e-05 tau_hat=1.002 c=1.003 (4s)
+  delta_c env=13.03 true=1.529 env_valid=1 kappa=0.000587 total 8s
+
+================================================================================
+== n20_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.998 tailmaxV=0.0007383 tau_hat=1.002 c=1.005 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0007383 tau_hat=1.002 c=1.005 (4s)
+  delta_c env=13.26 true=0.8888 env_valid=1 kappa=0.000561 total 8s
+
+================================================================================
+== n20_s2
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.096 tailmaxV=1.306e-11 tau_hat=1.02 c=1.021 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=5.351e-05 tau_hat=1.02 c=1.021 (4s)
+  delta_c env=12.99 true=1.064 env_valid=1 kappa=0.000579 total 8s
+
+================================================================================
+== n20_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.857 tailmaxV=1.046e-11 tau_hat=1.006 c=1.006 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=5.875e-05 tau_hat=1.006 c=1.006 (4s)
+  delta_c env=13.42 true=0.5199 env_valid=1 kappa=0.000523 total 8s
+
+================================================================================
+== n20_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.245 tailmaxV=8.723e-05 tau_hat=1.001 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=8.782e-05 tau_hat=1.001 c=1.003 (4s)
+  delta_c env=12.99 true=1.025 env_valid=1 kappa=0.000584 total 8s
+
+================================================================================
+== n2_s0
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.034 tailmaxV=0.0003588 tau_hat=1.003 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.2101 tau_hat=1.003 c=1.003 (5s)
+  delta_c env=37.29 true=3.473 env_valid=1 kappa=0.000508 total 9s
+
+================================================================================
+== n2_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.526 tailmaxV=0.002855 tau_hat=1.004 c=1.005 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.3706 tau_hat=1.004 c=1.005 (5s)
+  delta_c env=35.3 true=7.54 env_valid=1 kappa=0.000579 total 9s
+
+================================================================================
+== n2_s2
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=1.104e-10 tau_hat=1.021 c=1.021 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.1454 tau_hat=1.021 c=1.021 (5s)
+  delta_c env=38.21 true=4.887 env_valid=1 kappa=0.000489 total 9s
+
+================================================================================
+== n2_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.150 tailmaxV=1.357e-11 tau_hat=1.006 c=1.006 (4s)
+  qp_filter         safe_box=1.00 safe_V=0.87 cert_frac=1.000 tailmaxV=0.2167 tau_hat=1.006 c=1.006 (5s)
+  delta_c env=38.48 true=2.063 env_valid=1 kappa=0.000478 total 9s
+
+================================================================================
+== n2_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.104 tailmaxV=9.037e-05 tau_hat=1.003 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=0.60 cert_frac=1.000 tailmaxV=1.495 tau_hat=1.003 c=1.003 (5s)
+  delta_c env=37.08 true=6.318 env_valid=1 kappa=0.000558 total 9s
+
+================================================================================
+== n50_s0
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.582 tailmaxV=8.991e-05 tau_hat=0.01257 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=8.927e-05 tau_hat=0.01257 c=1.003 (4s)
+  delta_c env=8.378 true=0.7462 env_valid=1 kappa=0.000583 total 8s
+
+================================================================================
+== n50_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.995 tailmaxV=0.0006167 tau_hat=0.02196 c=1.005 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0006176 tau_hat=0.02196 c=1.005 (4s)
+  delta_c env=8.526 true=0.2204 env_valid=1 kappa=0.000576 total 9s
+
+================================================================================
+== n50_s2
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.185 tailmaxV=1.885e-05 tau_hat=0.0158 c=1.021 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=2.885e-05 tau_hat=0.0158 c=1.021 (4s)
+  delta_c env=8.418 true=0.3804 env_valid=1 kappa=0.000585 total 8s
+
+================================================================================
+== n50_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.965 tailmaxV=4.067e-11 tau_hat=0.01662 c=1.006 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=2.265e-05 tau_hat=0.01662 c=1.006 (4s)
+  delta_c env=8.7 true=0.5207 env_valid=1 kappa=0.000562 total 8s
+
+================================================================================
+== n50_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.829 tailmaxV=8.894e-05 tau_hat=0.02038 c=1.003 (3s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=8.886e-05 tau_hat=0.02038 c=1.003 (3s)
+  delta_c env=8.407 true=1.023 env_valid=1 kappa=0.000577 total 7s
+
+================================================================================
+== n5_s0
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.058 tailmaxV=7.585e-05 tau_hat=1.003 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0006991 tau_hat=1.003 c=1.003 (5s)
+  delta_c env=23.87 true=2.753 env_valid=1 kappa=0.000608 total 9s
+
+================================================================================
+== n5_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.988 tailmaxV=0.000724 tau_hat=1.004 c=1.005 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0007282 tau_hat=1.004 c=1.005 (5s)
+  delta_c env=23.98 true=3.488 env_valid=1 kappa=0.000595 total 9s
+
+================================================================================
+== n5_s2
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.216 tailmaxV=5.553e-12 tau_hat=1.02 c=1.021 (4s)
+  qp_filter         safe_box=1.00 safe_V=0.90 cert_frac=1.000 tailmaxV=0.01723 tau_hat=1.02 c=1.021 (5s)
+  delta_c env=24.49 true=3.238 env_valid=1 kappa=0.000595 total 9s
+
+================================================================================
+== n5_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.333 tailmaxV=1.333e-10 tau_hat=1.006 c=1.006 (4s)
+  qp_filter         safe_box=1.00 safe_V=0.97 cert_frac=1.000 tailmaxV=0.001461 tau_hat=1.006 c=1.006 (5s)
+  delta_c env=24.85 true=1.961 env_valid=1 kappa=0.000537 total 9s
+
+================================================================================
+== n5_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.065 tailmaxV=9.357e-05 tau_hat=1.002 c=1.003 (4s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0006567 tau_hat=1.002 c=1.003 (5s)
+  delta_c env=24.85 true=2.853 env_valid=1 kappa=0.000587 total 9s

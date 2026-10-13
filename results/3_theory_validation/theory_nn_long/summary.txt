@@ -1,0 +1,16 @@
+
+== Configs skipped because V had no safe sublevel set around the goal ==
+
+== Envelope validity (Prop. 5): fraction of configs where |f - f_hat| <= r_N on the whole grid ==
+  stage2_noise_fixed         1.000 over 35 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+
+== Theorem 2: tau_hat <= tau_delta whenever lambda_bar > lambda and the envelope is valid ==
+  stage2_noise_fixed         holds in 1.000 of 12 applicable configs (theory: 1.000)
+
+== Theorem 1 (ideal form): with a filter, tau_hat < c should imply safety ==
+  qp                predicted-safe configs:  35; of these fully safe (V<c always): 0.486; min cert_frac 0.000; median excess over max(e^-lt V0, tau_hat): 7.44e-03; limsup<=tau_hat in 0.629
+  qp_filter         predicted-safe configs:  35; of these fully safe (V<c always): 0.371; min cert_frac 1.000; median excess over max(e^-lt V0, tau_hat): 1.79e-02; limsup<=tau_hat in 0.943
+  configs where the SAMPLED-DATA form of Thm 1 is non-vacuous: 0 of 70 (expected ~0 at h = 0.05; plan item TH12)
+
+== Thm 2 rate (stage 2, fixed V) ==
+  slope tau_hat vs delta_c(env), configs with tau_hat < c/4: nan (expect about 2; Thm 2 is an upper bound, so faster decay is allowed)

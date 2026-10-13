@@ -1,0 +1,709 @@
+diff --git a/.gitignore b/.gitignore
+index dab00ed..2dc65f2 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -12,3 +12,5 @@ inverted_pendulum_sindy/
+ 
+ # Log files
+ *.log
++
++.DS_Store
+diff --git a/Lyapunov_guided_diffusion/controllers/diffusion_clbf.py b/Lyapunov_guided_diffusion/controllers/diffusion_clbf.py
+index 7c36813..e9a698b 100644
+--- a/Lyapunov_guided_diffusion/controllers/diffusion_clbf.py
++++ b/Lyapunov_guided_diffusion/controllers/diffusion_clbf.py
+@@ -66,6 +66,7 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
+         add_nominal: bool = False,
+         normalize_V_nominal: bool = False,
+         disable_gurobi: bool = True,
++        robust_delta: float = 0.0,
+     ):
+         """Initialize the controller.
+ 
+@@ -133,6 +134,9 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
+         self.barrier = barrier
+         self.add_nominal = add_nominal
+         self.normalize_V_nominal = normalize_V_nominal
++        # robust_delta > 0 inflates the descent loss by delta*||grad V||, training V
++        # to satisfy d_rob <= 0 rather than plain Lie_hf_V + lambda*V <= 0.
++        self.robust_delta = robust_delta
+         self.V_nominal_mean = 1.0
+ 
+         # Compute and save the center and range of the state variables
+@@ -588,11 +592,22 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
+         # Flatten the trajectories to process all points at once
+         trajectory_points = sampled_trajectories.reshape(-1, self.dynamics_model.n_dims)
+ 
+-
+-        # print("trajectory_points", trajectory_points.shape)
+-        
+         # Compute V values for all trajectory points
+         V = self.V(trajectory_points)
++
++        # Pre-compute ||grad V|| via central finite differences (works without requires_grad).
++        if self.robust_delta > 0.0:
++            eps_fd = 1e-3
++            grad_sq = torch.zeros(trajectory_points.shape[0], device=trajectory_points.device)
++            for j in range(trajectory_points.shape[1]):
++                xp = trajectory_points.detach().clone(); xp[:, j] = xp[:, j] + eps_fd
++                xm = trajectory_points.detach().clone(); xm[:, j] = xm[:, j] - eps_fd
++                with torch.no_grad():
++                    dV = (self.V(xp).squeeze(-1) - self.V(xm).squeeze(-1)) / (2.0 * eps_fd)
++                grad_sq = grad_sq + dV ** 2
++            grad_V_norm_cache = grad_sq.sqrt().unsqueeze(-1)  # (N, 1)
++        else:
++            grad_V_norm_cache = None
+         
+         eps = 1.0
+         clbf_descent_term_lin = torch.tensor(0.0).type_as(x)
+@@ -618,7 +633,11 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
+                 controls_flat.reshape(-1, self.dynamics_model.n_controls, 1),
+             )
+             Vdot = Vdot.reshape(V.shape)
+-            violation = F.relu(eps + Vdot + self.clf_lambda * V)
++            envelope = (
++                self.robust_delta * torch.norm(grad_V_norm_cache, dim=-1, keepdim=True).detach()
++                if self.robust_delta > 0.0 else 0.0
++            )
++            violation = F.relu(eps + Vdot + self.clf_lambda * V + envelope)
+             violation = violation * condition_active
+             clbf_descent_term_lin = clbf_descent_term_lin + violation.mean()
+             clbf_descent_acc_lin = clbf_descent_acc_lin + (violation <= eps).sum() / (
+@@ -637,8 +656,14 @@ class NeuralCLBFController(pl.LightningModule, CLFController):
+             xdot = self.dynamics_model.closed_loop_dynamics(trajectory_points, controls_flat, params=s)
+             trajectory_points_next = trajectory_points + self.dynamics_model.dt * xdot
+             V_next = self.V(trajectory_points_next)
++            # Simulated Vdot already uses finite-difference through hf; apply the same
++            # robust envelope so both descent terms are consistently inflated.
++            envelope_sim = (
++                self.robust_delta * torch.norm(grad_V_norm_cache, dim=-1, keepdim=True)
++                if self.robust_delta > 0.0 else 0.0
++            )
+             violation = F.relu(
+-                eps + (V_next - V) / self.controller_period + self.clf_lambda * V
++                eps + (V_next - V) / self.controller_period + self.clf_lambda * V + envelope_sim
+             )
+             violation = violation * condition_active
+ 
+diff --git a/Lyapunov_guided_diffusion/experiments/__init__.py b/Lyapunov_guided_diffusion/experiments/__init__.py
+index c0728ee..938d897 100644
+--- a/Lyapunov_guided_diffusion/experiments/__init__.py
++++ b/Lyapunov_guided_diffusion/experiments/__init__.py
+@@ -1,5 +1,3 @@
+-from warnings import warn
+-
+ from .experiment import Experiment
+ from .experiment_suite import ExperimentSuite
+ 
+@@ -24,33 +22,3 @@ __all__ = [
+     "RolloutNormExperiment",
+ ]
+ 
+-try:
+-    from .car_s_curve_experiment import CarSCurveExperiment  # noqa
+-    __all__.append("CarSCurveExperiment")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .bf_contour_experiment import BFContourExperiment  # noqa
+-    __all__.append("BFContourExperiment")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .obs_bf_verification_experiment import ObsBFVerificationExperiment  # noqa
+-    __all__.append("ObsBFVerificationExperiment")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .turtlebot_hw_state_feedback_experiment import (  # noqa: F401
+-        TurtlebotHWStateFeedbackExperiment,
+-    )
+-    from .turtlebot_hw_obs_feedback_experiment import (  # noqa: F401
+-        TurtlebotHWObsFeedbackExperiment,
+-    )
+-
+-    __all__.append("TurtlebotHWStateFeedbackExperiment")
+-    __all__.append("TurtlebotHWObsFeedbackExperiment")
+-except ImportError:
+-    warn("Could not import HW module; is ROS installed?")
+diff --git a/Lyapunov_guided_diffusion/experiments/rollout_success_rate_experiment.py b/Lyapunov_guided_diffusion/experiments/rollout_success_rate_experiment.py
+index 3512c40..4fdbbc8 100644
+--- a/Lyapunov_guided_diffusion/experiments/rollout_success_rate_experiment.py
++++ b/Lyapunov_guided_diffusion/experiments/rollout_success_rate_experiment.py
+@@ -10,7 +10,6 @@ import tqdm
+ import numpy as np
+ 
+ from neural_clbf.experiments import Experiment
+-from neural_clbf.systems.planar_lidar_system import Scene
+ 
+ if TYPE_CHECKING:
+     from neural_clbf.controllers import Controller, NeuralObsBFController  # noqa
+@@ -75,6 +74,8 @@ class RolloutSuccessRateExperiment(Experiment):
+         for sim_idx in prog_bar_range:
+             # Generate a random environment
+             if hasattr(controller_under_test.dynamics_model, "scene"):
++                from neural_clbf.systems.planar_lidar_system import Scene
++
+                 room_size = 10.0
+                 num_obstacles = 8
+                 box_size_range = (0.75, 1.75)
+diff --git a/Lyapunov_guided_diffusion/sindy/collect_data.py b/Lyapunov_guided_diffusion/sindy/collect_data.py
+index 35a7ea1..da9c292 100644
+--- a/Lyapunov_guided_diffusion/sindy/collect_data.py
++++ b/Lyapunov_guided_diffusion/sindy/collect_data.py
+@@ -28,7 +28,9 @@ def collect_safe_transitions(
+     num_trajectories: int = 200,
+     trajectory_length: int = 100,
+     exploration_std: float = 0.5,
++    obs_noise_std: float = 0.0,
+     seed: int = 42,
++    ic_radius: float = 0.0,
+ ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+     """
+     Collect transition data using the system's LQR nominal controller
+@@ -39,6 +41,11 @@ def collect_safe_transitions(
+         num_trajectories: number of rollouts to collect
+         trajectory_length: timesteps per rollout
+         exploration_std: std of additive Gaussian noise on control
++        obs_noise_std: std of Gaussian measurement noise added to the
++            *recorded* states and derivatives that SINDy sees. The rollout
++            itself still uses the clean true dynamics so trajectories stay
++            safe; only the identification dataset is corrupted. This is the
++            primary knob for deliberately enlarging the model error delta.
+         seed: random seed
+ 
+     Returns:
+@@ -60,8 +67,16 @@ def collect_safe_transitions(
+     all_xdot = []
+ 
+     for traj_idx in range(num_trajectories):
+-        # Sample initial condition from the safe region
+-        x = system.sample_safe(1)  # (1, n_dims)
++        # Sample initial condition. Default (ic_radius<=0): the safe ball
++        # (||x||<=0.5). With ic_radius>0 we start trajectories across a wider ball
++        # (out toward the ||x||=1.5 cliff) so the identification data gains coverage
++        # near the safety boundary -- the "wide data" test (Option A / a precursor to
++        # Direction 1). The LQR then pulls each rollout back toward the goal, tracing
++        # data from the cliff down to the goal.
++        if ic_radius <= 0.0:
++            x = system.sample_safe(1)  # (1, n_dims)
++        else:
++            x = system.sample_with_mask(1, lambda xx: xx.norm(dim=-1) <= ic_radius)
+ 
+         for t in range(trajectory_length):
+             # Compute nominal LQR control
+@@ -83,10 +98,18 @@ def collect_safe_transitions(
+             with torch.no_grad():
+                 xdot = system.closed_loop_dynamics(x, u)
+ 
+-            # Record the transition
+-            all_x.append(x.numpy().flatten())
+-            all_u.append(u.numpy().flatten())
+-            all_xdot.append(xdot.numpy().flatten())
++            # Record the transition. Measurement noise corrupts only the
++            # recorded (identification) data, not the rollout, so the
++            # trajectory remains safe while SINDy sees a degraded dataset.
++            x_rec = x.numpy().flatten()
++            u_rec = u.numpy().flatten()
++            xdot_rec = xdot.numpy().flatten()
++            if obs_noise_std > 0.0:
++                x_rec = x_rec + np.random.normal(0.0, obs_noise_std, size=x_rec.shape)
++                xdot_rec = xdot_rec + np.random.normal(0.0, obs_noise_std, size=xdot_rec.shape)
++            all_x.append(x_rec)
++            all_u.append(u_rec)
++            all_xdot.append(xdot_rec)
+ 
+             # Euler step to get next state
+             x_next = x + dt * xdot
+@@ -115,6 +138,9 @@ def main():
+                         help="Max timesteps per trajectory")
+     parser.add_argument("--exploration_std", type=float, default=0.5,
+                         help="Std of exploration noise on controls")
++    parser.add_argument("--obs_noise_std", type=float, default=0.0,
++                        help="Std of measurement noise on recorded states/derivatives "
++                             "(knob to enlarge SINDy error delta)")
+     parser.add_argument("--output", type=str, default="data/sindy_transitions.npz",
+                         help="Output file path")
+     parser.add_argument("--seed", type=int, default=42)
+@@ -137,6 +163,7 @@ def main():
+         num_trajectories=args.num_trajectories,
+         trajectory_length=args.trajectory_length,
+         exploration_std=args.exploration_std,
++        obs_noise_std=args.obs_noise_std,
+         seed=args.seed,
+     )
+ 
+diff --git a/Lyapunov_guided_diffusion/sindy/evaluate.py b/Lyapunov_guided_diffusion/sindy/evaluate.py
+index e85e114..d71d887 100644
+--- a/Lyapunov_guided_diffusion/sindy/evaluate.py
++++ b/Lyapunov_guided_diffusion/sindy/evaluate.py
+@@ -53,18 +53,54 @@ def evaluate_on_true_system(
+         "V_values": np.zeros((num_rollouts, num_steps + 1)),
+         "safe_flags": np.ones(num_rollouts, dtype=bool),
+         "goal_reached": np.zeros(num_rollouts, dtype=bool),
++        # Option B bookkeeping: which rollouts ran away (diverged) and the step
++        # at which each first crossed the divergence threshold (-1 = survived).
++        "diverged": np.zeros(num_rollouts, dtype=bool),
++        "exit_step": np.full(num_rollouts, -1, dtype=int),
+     }
+ 
+     x = x_init.clone()
+     results["trajectories"][:, 0, :] = x.numpy()
+ 
++    # A rollout on the TRUE system can diverge for an unlucky initial condition
++    # under the f_hat-trained policy. The state may blow up to a non-finite
++    # value OR to a large-but-finite value that later overflows to infinity
++    # inside the controller's sampler/QP solver, raising
++    # "Input X contains infinity or a value too large for dtype('float32')."
++    # Either way the whole config aborts. Instead, detect divergence (either by
++    # magnitude or by non-finiteness), mark that rollout unsafe, and freeze it
++    # at a finite out-of-bounds sentinel so the solver stays well-posed.
++    diverged = torch.zeros(num_rollouts, dtype=torch.bool)
++    sentinel = 2.0  # ||x|| ~ 2.83 -> outside the unsafe boundary (>=1.5)
++    divergence_threshold = 1e3  # far beyond the +-2 operating domain; pre-overflow
++
++    def _freeze_diverged(state):
++        """Mark and freeze rollouts that have diverged (huge or non-finite)."""
++        finite = torch.isfinite(state).all(dim=-1)
++        too_big = state.abs().amax(dim=-1) > divergence_threshold
++        bad = (~finite) | too_big
++        new_diverged = bad & (~diverged)
++        diverged[bad] = True
++        if diverged.any():
++            state = torch.where(
++                diverged.unsqueeze(-1), torch.full_like(state, sentinel), state
++            )
++            # Scrub any residual non-finite entries so the sentinel write holds.
++            state = torch.nan_to_num(state, nan=sentinel, posinf=sentinel,
++                                     neginf=sentinel)
++        return state, new_diverged
++
+     with torch.no_grad():
++        x, new_div = _freeze_diverged(x)
++        results["exit_step"][new_div.numpy()] = 0
+         V0 = controller.V(x)
+         results["V_values"][:, 0] = V0.numpy().flatten()
+ 
+         for t in range(num_steps):
+-            # Controller decides action using learned dynamics (f_hat internally)
+-            u = controller(x)
++            # Controller decides action using learned dynamics (f_hat internally).
++            # Use the CLF-QP directly (controller.u) to avoid the slow diffusion
++            # sampler path that controller.__call__ / forward() uses.
++            u = controller.u(x)
+ 
+             # But the actual dynamics evolve under the TRUE system
+             # Euler integration at simulation dt within controller_period
+@@ -74,7 +110,11 @@ def evaluate_on_true_system(
+                 xdot = true_system.closed_loop_dynamics(x_current, u)
+                 x_current = x_current + dt * xdot
+ 
+-            x = x_current
++            # Sanitize before the next controller call so a diverged rollout
++            # never poisons the QP solver.
++            x, new_div = _freeze_diverged(x_current)
++            results["exit_step"][new_div.numpy()] = t + 1
++            results["safe_flags"][diverged.numpy()] = False
+ 
+             # Record
+             results["trajectories"][:, t + 1, :] = x.numpy()
+@@ -85,10 +125,12 @@ def evaluate_on_true_system(
+             unsafe = true_system.unsafe_mask(x)
+             results["safe_flags"][unsafe.numpy()] = False
+ 
+-            # Check goal
++            # Check goal (diverged rollouts can never count as reaching the goal)
+             goal = true_system.goal_mask(x)
++            goal[diverged] = False
+             results["goal_reached"][goal.numpy()] = True
+ 
++    results["diverged"] = diverged.numpy().copy()
+     return results
+ 
+ 
+diff --git a/Lyapunov_guided_diffusion/systems/__init__.py b/Lyapunov_guided_diffusion/systems/__init__.py
+index 7175b4e..f69346b 100644
+--- a/Lyapunov_guided_diffusion/systems/__init__.py
++++ b/Lyapunov_guided_diffusion/systems/__init__.py
+@@ -1,5 +1,3 @@
+-from warnings import warn
+-
+ from .control_affine_system import ControlAffineSystem
+ from .observable_system import ObservableSystem
+ from .inverted_pendulum import InvertedPendulum
+@@ -12,88 +10,3 @@ __all__ = [
+     "SINDyEstimatedSystem",
+ ]
+ 
+-# Optional imports — these depend on additional packages (shapely, etc.)
+-try:
+-    from .planar_lidar_system import PlanarLidarSystem  # noqa
+-    __all__.append("PlanarLidarSystem")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .quad2d import Quad2D  # noqa
+-    __all__.append("Quad2D")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .quad3d import Quad3D  # noqa
+-    __all__.append("Quad3D")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .neural_lander import NeuralLander  # noqa
+-    __all__.append("NeuralLander")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .kinematic_single_track_car import KSCar  # noqa
+-    __all__.append("KSCar")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .segway import Segway  # noqa
+-    __all__.append("Segway")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .linear_satellite import LinearSatellite  # noqa
+-    __all__.append("LinearSatellite")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .autorally import AutoRally  # noqa
+-    __all__.append("AutoRally")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .observable_system import ObservableSystem  # noqa
+-    __all__.append("ObservableSystem")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .single_track_car import STCar  # noqa
+-    __all__.append("STCar")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .turtlebot import TurtleBot  # noqa
+-    __all__.append("TurtleBot")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .turtlebot_2d import TurtleBot2D  # noqa
+-    __all__.append("TurtleBot2D")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .single_integrator_2d import SingleIntegrator2D  # noqa
+-    __all__.append("SingleIntegrator2D")
+-except ImportError:
+-    pass
+-
+-try:
+-    from .f16 import F16  # noqa
+-
+-    __all__.append("F16")
+-except ImportError:
+-    warn("Could not import F16 module; is AeroBench installed")
+diff --git a/Lyapunov_guided_diffusion/systems/sindy_estimated_system.py b/Lyapunov_guided_diffusion/systems/sindy_estimated_system.py
+index 5fd4409..14fcf3e 100644
+--- a/Lyapunov_guided_diffusion/systems/sindy_estimated_system.py
++++ b/Lyapunov_guided_diffusion/systems/sindy_estimated_system.py
+@@ -83,6 +83,15 @@ class SINDyEstimatedSystem(ControlAffineSystem):
+             scenarios=scenarios,
+         )
+ 
++        # compute_linearized_controller stores K and P as float64 tensors. The
++        # rest of the pipeline operates in float32, and Apple's MPS backend does
++        # not support float64; cast here so the learned controller is consistent
++        # with the network dtype and runs on all backends.
++        if hasattr(self, "K"):
++            self.K = self.K.float()
++        if hasattr(self, "P"):
++            self.P = self.P.float()
++
+     def validate_params(self, params: Scenario) -> bool:
+         """Accept any params — the SINDy model doesn't use them for dynamics."""
+         return True
+@@ -124,6 +133,30 @@ class SINDyEstimatedSystem(ControlAffineSystem):
+     def u_eq(self):
+         return self.reference_system.u_eq
+ 
++    def _safe_predict(self, x_np, u_np):
++        """Evaluate the SINDy model defensively so it can never hard-crash a run.
++
++        During training on a noisy model the certificate network can transiently
++        drive the simulated state to huge or NaN values (gradient spikes before
++        clipping settles). pysindy's predict then raises either
++        'Input contains NaN.' or 'Input ... too large for float32' (the degree-3
++        polynomial library overflows when a state is raised to a power). Both
++        abort an entire multi-hour sweep config.
++
++        We therefore (1) replace non-finite entries with 0 (the origin) and
++        (2) clamp the magnitude so the feature expansion stays within float32.
++        A state this large is already far outside the unsafe set, so this never
++        changes a legitimate trajectory; the certificate's divergence handling
++        takes over from there. The output is scrubbed too, as a last resort.
++        """
++        clip = 1.0e4
++        x_np = np.nan_to_num(x_np, nan=0.0, posinf=0.0, neginf=0.0)
++        u_np = np.nan_to_num(u_np, nan=0.0, posinf=0.0, neginf=0.0)
++        x_np = np.clip(x_np, -clip, clip)
++        u_np = np.clip(u_np, -clip, clip)
++        xdot = self.sindy_model.predict(x_np, u=u_np)
++        return np.nan_to_num(xdot, nan=0.0, posinf=0.0, neginf=0.0)
++
+     def _f(self, x: torch.Tensor, params: Scenario):
+         """
+         Return the drift component f(x) of the control-affine dynamics.
+@@ -143,7 +176,7 @@ class SINDyEstimatedSystem(ControlAffineSystem):
+         u_zero = np.zeros((batch_size, self._n_controls))
+ 
+         # Evaluate SINDy model at u=0 to get drift
+-        xdot_np = self.sindy_model.predict(x_np, u=u_zero)
++        xdot_np = self._safe_predict(x_np, u_zero)
+         f = torch.from_numpy(xdot_np).float().to(x.device)
+         return f.unsqueeze(-1)  # (bs, n_dims, 1)
+ 
+@@ -167,14 +200,14 @@ class SINDyEstimatedSystem(ControlAffineSystem):
+         u_zero = np.zeros((batch_size, self._n_controls))
+ 
+         # Get baseline (drift)
+-        xdot_base = self.sindy_model.predict(x_np, u=u_zero)
++        xdot_base = self._safe_predict(x_np, u_zero)
+ 
+         # Compute g by perturbing each control dimension
+         g_np = np.zeros((batch_size, self._n_dims, self._n_controls))
+         for j in range(self._n_controls):
+             u_pert = np.zeros((batch_size, self._n_controls))
+             u_pert[:, j] = 1.0
+-            xdot_pert = self.sindy_model.predict(x_np, u=u_pert)
++            xdot_pert = self._safe_predict(x_np, u_pert)
+             g_np[:, :, j] = xdot_pert - xdot_base
+ 
+         g = torch.from_numpy(g_np).float().to(x.device)
+@@ -238,7 +271,7 @@ class SINDyEstimatedSystem(ControlAffineSystem):
+         u_np = u.detach().cpu().numpy()
+ 
+         # Evaluate the SINDy model: Θ(x, u) @ Ξ_hat
+-        xdot_np = self.sindy_model.predict(x_np, u=u_np)
++        xdot_np = self._safe_predict(x_np, u_np)
+ 
+         xdot = torch.from_numpy(xdot_np).float().to(x.device)
+ 
+diff --git a/Lyapunov_guided_diffusion/training/train_inverted_pendulum_sindy.py b/Lyapunov_guided_diffusion/training/train_inverted_pendulum_sindy.py
+index 3346e88..b2df616 100644
+--- a/Lyapunov_guided_diffusion/training/train_inverted_pendulum_sindy.py
++++ b/Lyapunov_guided_diffusion/training/train_inverted_pendulum_sindy.py
+@@ -56,43 +56,35 @@ start_x = torch.tensor(
+ simulation_dt = 0.01
+ 
+ 
+-def main(args):
+-    # Define the scenarios (same as original)
+-    nominal_params = {"m": 1.0, "L": 1.0, "b": 0.01}
+-    scenarios = [nominal_params]
+-
+-    # ================================================================
+-    # KEY DIFFERENCE: Load SINDYc-learned dynamics instead of true model
+-    # ================================================================
+-
+-    # First, create the reference (true) system for geometry/limits
+-    true_system = InvertedPendulum(
+-        nominal_params,
+-        dt=simulation_dt,
+-        controller_dt=controller_period,
+-        scenarios=scenarios,
+-    )
+-
+-    # Load the SINDy-identified model and wrap it as a ControlAffineSystem
+-    sindy_model_path = args.sindy_model if hasattr(args, 'sindy_model') else "data/sindy_model.pkl"
+-    dynamics_model = load_sindy_system(
+-        model_path=sindy_model_path,
+-        reference_system=true_system,
+-        dt=simulation_dt,
+-        controller_dt=controller_period,
+-        scenarios=scenarios,
+-    )
+-
+-    # Compute and report the dynamics error δ (Eq. 13)
+-    print("\n=== Dynamics Error Analysis (Theorem 6) ===")
+-    error_metrics = dynamics_model.compute_dynamics_error(true_system, num_samples=10000)
+-    print(f"  δ (sup ||f - f_hat||₂) = {error_metrics['delta_sup']:.6f}")
+-    print(f"  δ (mean)               = {error_metrics['delta_mean']:.6f}")
+-    print(f"  δ (median)             = {error_metrics['delta_median']:.6f}")
+-    print(f"  For Theorem 6: lim sup V(x_t) ≤ Cε^(1/n) + B·{error_metrics['delta_sup']:.4f}/λ₁")
+-    print()
+-
+-    # Initialize the DataModule (uses the SINDy model for sampling)
++def build_and_train(
++    dynamics_model,
++    scenarios,
++    max_epochs: int = 51,
++    accelerator: str = "cpu",
++    log_dir: str = "logs/inverted_pendulum_sindy",
++    log_name: str = None,
++    enable_logger: bool = True,
++    detect_anomaly: bool = False,
++    robust_delta: float = 0.0,
++):
++    """Build a NeuralCLBFController on the given dynamics model and train it.
++
++    Factored out of main() so the sweep driver can call it in-process with an
++    in-memory SINDy system, a reduced epoch budget, and a GPU accelerator on
++    the cluster.
++
++    Args:
++        dynamics_model: the (SINDy-estimated or true) ControlAffineSystem.
++        scenarios: scenario list passed to the controller.
++        max_epochs: training epochs (use a smaller value for sweeps).
++        accelerator: pytorch-lightning accelerator ("cpu", "gpu", or "auto").
++        log_dir / log_name: TensorBoard logging location.
++        enable_logger: if False, disables logging entirely (sweep runs).
++        detect_anomaly: enable autograd anomaly detection (slow; debug only).
++
++    Returns:
++        The trained NeuralCLBFController.
++    """
+     initial_conditions = [
+         (-np.pi / 2, np.pi / 2),  # theta
+         (-1.0, 1.0),              # theta_dot
+@@ -108,7 +100,6 @@ def main(args):
+         batch_size=64,
+     )
+ 
+-    # Define the experiment suite
+     V_contour_experiment = CLFContourExperiment(
+         "V_Contour",
+         domain=[(-2.0, 2.0), (-2.0, 2.0)],
+@@ -132,9 +123,8 @@ def main(args):
+     )
+     experiment_suite = ExperimentSuite([V_contour_experiment, rollout_experiment])
+ 
+-    # Initialize the controller with SINDy-estimated dynamics
+     clbf_controller = NeuralCLBFController(
+-        dynamics_model,  # <-- This is now the SINDyEstimatedSystem!
++        dynamics_model,
+         scenarios,
+         data_module,
+         experiment_suite=experiment_suite,
+@@ -148,21 +138,81 @@ def main(args):
+         epochs_per_episode=100,
+         barrier=False,
+         disable_gurobi=True,
++        robust_delta=robust_delta,
+     )
+ 
+-    # Initialize the logger and trainer
+-    tb_logger = pl_loggers.TensorBoardLogger(
+-        "logs/inverted_pendulum_sindy",
+-        name=f"commit_{current_git_hash()}",
+-    )
++    if enable_logger:
++        if log_name is None:
++            log_name = f"commit_{current_git_hash()}"
++        logger = pl_loggers.TensorBoardLogger(log_dir, name=log_name)
++    else:
++        # The controller's experiment suite calls self.logger.experiment during
++        # validation, so a logger must exist even for sweep runs. Point it at a
++        # throwaway temp directory instead of disabling logging entirely.
++        import tempfile
++        logger = pl_loggers.TensorBoardLogger(
++            tempfile.mkdtemp(prefix="sindy_sweep_"), name="run"
++        )
++
+     trainer = pl.Trainer(
+-        logger=tb_logger,
+-        max_epochs=51,
++        logger=logger,
++        max_epochs=max_epochs,
++        accelerator=accelerator,
++        gradient_clip_val=10.0,
++        enable_progress_bar=False,   # suppress per-step bar in sweep logs
++        log_every_n_steps=50,        # reduce logging overhead
+     )
+ 
+-    # Train
+-    torch.autograd.set_detect_anomaly(True)
++    if detect_anomaly:
++        torch.autograd.set_detect_anomaly(True)
+     trainer.fit(clbf_controller)
++    return clbf_controller
++
++
++def main(args):
++    # Define the scenarios (same as original)
++    nominal_params = {"m": 1.0, "L": 1.0, "b": 0.01}
++    scenarios = [nominal_params]
++
++    # ================================================================
++    # KEY DIFFERENCE: Load SINDYc-learned dynamics instead of true model
++    # ================================================================
++
++    # First, create the reference (true) system for geometry/limits
++    true_system = InvertedPendulum(
++        nominal_params,
++        dt=simulation_dt,
++        controller_dt=controller_period,
++        scenarios=scenarios,
++    )
++
++    # Load the SINDy-identified model and wrap it as a ControlAffineSystem
++    sindy_model_path = args.sindy_model if hasattr(args, 'sindy_model') else "data/sindy_model.pkl"
++    dynamics_model = load_sindy_system(
++        model_path=sindy_model_path,
++        reference_system=true_system,
++        dt=simulation_dt,
++        controller_dt=controller_period,
++        scenarios=scenarios,
++    )
++
++    # Compute and report the dynamics error δ (Eq. 13)
++    print("\n=== Dynamics Error Analysis (Theorem 6) ===")
++    error_metrics = dynamics_model.compute_dynamics_error(true_system, num_samples=10000)
++    print(f"  δ (sup ||f - f_hat||₂) = {error_metrics['delta_sup']:.6f}")
++    print(f"  δ (mean)               = {error_metrics['delta_mean']:.6f}")
++    print(f"  δ (median)             = {error_metrics['delta_median']:.6f}")
++    print(f"  For Theorem 6: lim sup V(x_t) ≤ Cε^(1/n) + B·{error_metrics['delta_sup']:.4f}/λ₁")
++    print()
++
++    # Build the controller on the SINDy-estimated dynamics and train it.
++    build_and_train(
++        dynamics_model,
++        scenarios,
++        max_epochs=args.max_epochs,
++        accelerator=args.accelerator,
++        detect_anomaly=True,
++    )
+ 
+ 
+ if __name__ == "__main__":
+@@ -170,6 +220,10 @@ if __name__ == "__main__":
+     parser = argparse.ArgumentParser()
+     parser.add_argument("--sindy_model", type=str, default="data/sindy_model.pkl",
+                         help="Path to the fitted SINDYc model")
++    parser.add_argument("--max_epochs", type=int, default=51,
++                        help="Number of training epochs")
++    parser.add_argument("--accelerator", type=str, default="cpu",
++                        help="pytorch-lightning accelerator: cpu, gpu, or auto")
+     args = parser.parse_args()
+ 
+     main(args)

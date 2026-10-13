@@ -1,0 +1,424 @@
+
+================================================================================
+== bias_n100_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.096 tailmaxV=0.002194 tau_hat=0.003474 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.02863 tau_hat=0.003474 c=0.6597 (2s)
+  delta_c env=3.423 true=0.1635 env_valid=1 kappa=0.000603 total 4s
+
+================================================================================
+== bias_n100_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.021 tailmaxV=0.04676 tau_hat=0.003646 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.004194 tau_hat=0.003646 c=0.6597 (2s)
+  delta_c env=3.461 true=0.1814 env_valid=1 kappa=0.000592 total 4s
+
+================================================================================
+== bias_n100_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.060 tailmaxV=0.005337 tau_hat=0.003828 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.004214 tau_hat=0.003828 c=0.6597 (2s)
+  delta_c env=3.478 true=0.1878 env_valid=1 kappa=0.00058 total 4s
+
+================================================================================
+== bias_n100_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.070 tailmaxV=0.003224 tau_hat=0.003648 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01631 tau_hat=0.003648 c=0.6597 (2s)
+  delta_c env=3.493 true=0.1716 env_valid=1 kappa=0.000578 total 4s
+
+================================================================================
+== bias_n100_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.092 tailmaxV=0.002022 tau_hat=0.003967 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.005456 tau_hat=0.003967 c=0.6597 (2s)
+  delta_c env=3.471 true=0.2259 env_valid=1 kappa=0.000577 total 4s
+
+================================================================================
+== bias_n200_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.105 tailmaxV=0.002109 tau_hat=0.001821 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01727 tau_hat=0.001821 c=0.6597 (2s)
+  delta_c env=2.461 true=0.05942 env_valid=1 kappa=0.000604 total 5s
+
+================================================================================
+== bias_n200_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.027 tailmaxV=0.04397 tau_hat=0.001802 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.004104 tau_hat=0.001802 c=0.6597 (2s)
+  delta_c env=2.463 true=0.1589 env_valid=1 kappa=0.000604 total 5s
+
+================================================================================
+== bias_n200_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.071 tailmaxV=0.005171 tau_hat=0.001891 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.003295 tau_hat=0.001891 c=0.6597 (2s)
+  delta_c env=2.501 true=0.1604 env_valid=1 kappa=0.000578 total 5s
+
+================================================================================
+== bias_n200_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.081 tailmaxV=0.003043 tau_hat=0.001654 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.003212 tau_hat=0.001654 c=0.6597 (2s)
+  delta_c env=2.487 true=0.2529 env_valid=1 kappa=0.000585 total 5s
+
+================================================================================
+== bias_n200_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.099 tailmaxV=0.002087 tau_hat=0.001737 c=0.6597 (1s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.006596 tau_hat=0.001737 c=0.6597 (2s)
+  delta_c env=2.467 true=0.1686 env_valid=1 kappa=0.000586 total 4s
+
+================================================================================
+== bias_n20_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.072 tailmaxV=0.002102 tau_hat=0.02693 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.42 tau_hat=0.02693 c=0.6597 (2s)
+  delta_c env=7.57 true=0.703 env_valid=1 kappa=0.000587 total 4s
+
+================================================================================
+== bias_n20_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.013 tailmaxV=0.03819 tau_hat=0.02689 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.006197 tau_hat=0.02689 c=0.6597 (2s)
+  delta_c env=7.665 true=0.3368 env_valid=1 kappa=0.000561 total 4s
+
+================================================================================
+== bias_n20_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.041 tailmaxV=0.004919 tau_hat=0.05017 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01419 tau_hat=0.05017 c=0.6597 (2s)
+  delta_c env=7.551 true=0.5121 env_valid=1 kappa=0.000579 total 4s
+
+================================================================================
+== bias_n20_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.040 tailmaxV=0.003161 tau_hat=0.3309 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01914 tau_hat=0.3309 c=0.6597 (2s)
+  delta_c env=7.686 true=0.1721 env_valid=1 kappa=0.000523 total 3s
+
+================================================================================
+== bias_n20_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.069 tailmaxV=0.001855 tau_hat=0.07248 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.05972 tau_hat=0.07248 c=0.6597 (2s)
+  delta_c env=7.532 true=0.444 env_valid=1 kappa=0.000584 total 3s
+
+================================================================================
+== bias_n500_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.117 tailmaxV=0.002177 tau_hat=0.0007115 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.003177 tau_hat=0.0007115 c=0.6597 (2s)
+  delta_c env=1.591 true=0.05194 env_valid=1 kappa=0.000589 total 7s
+
+================================================================================
+== bias_n500_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.031 tailmaxV=0.04751 tau_hat=0.0007115 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.00398 tau_hat=0.0007115 c=0.6597 (2s)
+  delta_c env=1.587 true=0.06349 env_valid=1 kappa=0.000596 total 7s
+
+================================================================================
+== bias_n500_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.079 tailmaxV=0.005316 tau_hat=0.0007238 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.001701 tau_hat=0.0007238 c=0.6597 (2s)
+  delta_c env=1.602 true=0.1383 env_valid=1 kappa=0.000579 total 7s
+
+================================================================================
+== bias_n500_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.090 tailmaxV=0.003023 tau_hat=0.0006701 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.002868 tau_hat=0.0006701 c=0.6597 (2s)
+  delta_c env=1.597 true=0.2366 env_valid=1 kappa=0.000589 total 7s
+
+================================================================================
+== bias_n500_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.109 tailmaxV=0.002137 tau_hat=0.0006952 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.004206 tau_hat=0.0006952 c=0.6597 (2s)
+  delta_c env=1.603 true=0.1298 env_valid=1 kappa=0.000579 total 7s
+
+================================================================================
+== bias_n50_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.082 tailmaxV=0.002294 tau_hat=0.007805 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.02693 tau_hat=0.007805 c=0.6597 (2s)
+  delta_c env=4.836 true=0.3347 env_valid=1 kappa=0.000583 total 4s
+
+================================================================================
+== bias_n50_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.017 tailmaxV=0.04959 tau_hat=0.00748 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.003959 tau_hat=0.00748 c=0.6597 (2s)
+  delta_c env=4.887 true=0.1204 env_valid=1 kappa=0.000576 total 4s
+
+================================================================================
+== bias_n50_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.052 tailmaxV=0.005039 tau_hat=0.009906 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.005598 tau_hat=0.009906 c=0.6597 (2s)
+  delta_c env=4.853 true=0.1396 env_valid=1 kappa=0.000585 total 4s
+
+================================================================================
+== bias_n50_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.055 tailmaxV=0.004301 tau_hat=0.009906 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01065 tau_hat=0.009906 c=0.6597 (2s)
+  delta_c env=4.936 true=0.2211 env_valid=1 kappa=0.000562 total 4s
+
+================================================================================
+== bias_n50_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.082 tailmaxV=0.001848 tau_hat=0.01175 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.007028 tau_hat=0.01175 c=0.6597 (2s)
+  delta_c env=4.834 true=0.405 env_valid=1 kappa=0.000577 total 4s
+
+================================================================================
+== bias_n5_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.046 tailmaxV=0.001449 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.03269 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=14.1 true=1.036 env_valid=1 kappa=0.000608 total 3s
+
+================================================================================
+== bias_n5_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.007 tailmaxV=0.02917 tau_hat=0.5628 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01851 tau_hat=0.5628 c=0.6597 (2s)
+  delta_c env=14.06 true=1.581 env_valid=1 kappa=0.000595 total 3s
+
+================================================================================
+== bias_n5_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.016 tailmaxV=0.004912 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.03037 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=14.46 true=1.633 env_valid=1 kappa=0.000595 total 3s
+
+================================================================================
+== bias_n5_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.042 tailmaxV=0.005061 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0001046 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=14.46 true=0.9671 env_valid=1 kappa=0.000537 total 3s
+
+================================================================================
+== bias_n5_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.044 tailmaxV=0.001459 tau_hat=0.6513 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=0.97 cert_frac=1.000 tailmaxV=0.6385 tau_hat=0.6513 c=0.6597 (2s)
+  delta_c env=14.58 true=1.273 env_valid=1 kappa=0.000587 total 3s
+
+================================================================================
+== linear_n100_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002354 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.521e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=454.6 true=0.8103 env_valid=1 kappa=0.000625 total 4s
+
+================================================================================
+== linear_n100_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.04948 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.487e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=459.5 true=0.8896 env_valid=1 kappa=0.000615 total 4s
+
+================================================================================
+== linear_n100_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.005639 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.496e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=462.2 true=0.7834 env_valid=1 kappa=0.000601 total 4s
+
+================================================================================
+== linear_n100_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.003397 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.51e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=464 true=0.7342 env_valid=1 kappa=0.0006 total 4s
+
+================================================================================
+== linear_n100_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002157 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.497e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=460.4 true=0.7175 env_valid=1 kappa=0.000601 total 4s
+
+================================================================================
+== linear_n200_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002257 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.546e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=455.2 true=0.729 env_valid=1 kappa=0.000627 total 5s
+
+================================================================================
+== linear_n200_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.04658 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.507e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=455.5 true=0.777 env_valid=1 kappa=0.000627 total 5s
+
+================================================================================
+== linear_n200_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.005487 tau_hat=0.6584 c=0.6597 (1s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.501e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=462.8 true=0.7701 env_valid=1 kappa=0.000599 total 5s
+
+================================================================================
+== linear_n200_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.003236 tau_hat=0.6584 c=0.6597 (1s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.508e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=460.1 true=0.7431 env_valid=1 kappa=0.000608 total 5s
+
+================================================================================
+== linear_n200_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002217 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.506e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=456.8 true=0.7746 env_valid=1 kappa=0.000608 total 5s
+
+================================================================================
+== linear_n20_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002266 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.546e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=466 true=1.063 env_valid=1 kappa=0.000616 total 3s
+
+================================================================================
+== linear_n20_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.04113 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.495e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=472.7 true=0.8016 env_valid=1 kappa=0.000587 total 4s
+
+================================================================================
+== linear_n20_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.005169 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.497e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=467.5 true=0.9473 env_valid=1 kappa=0.000598 total 4s
+
+================================================================================
+== linear_n20_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.003312 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.463e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=476.9 true=0.7854 env_valid=1 kappa=0.00054 total 4s
+
+================================================================================
+== linear_n20_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002002 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.498e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=465.1 true=0.7841 env_valid=1 kappa=0.00061 total 3s
+
+================================================================================
+== linear_n500_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002339 tau_hat=0.6584 c=0.6597 (1s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.516e-06 tau_hat=0.6584 c=0.6597 (1s)
+  delta_c env=457 true=0.723 env_valid=1 kappa=0.000614 total 6s
+
+================================================================================
+== linear_n500_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.05056 tau_hat=0.6584 c=0.6597 (1s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.496e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=455.9 true=0.7511 env_valid=1 kappa=0.000618 total 7s
+
+================================================================================
+== linear_n500_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.005627 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.502e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=460.5 true=0.8231 env_valid=1 kappa=0.0006 total 7s
+
+================================================================================
+== linear_n500_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.003217 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.51e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=458.7 true=0.7408 env_valid=1 kappa=0.000612 total 7s
+
+================================================================================
+== linear_n500_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002282 tau_hat=0.6584 c=0.6597 (1s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.51e-06 tau_hat=0.6584 c=0.6597 (1s)
+  delta_c env=461.1 true=0.7592 env_valid=1 kappa=0.0006 total 6s
+
+================================================================================
+== linear_n50_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.002472 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.54e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=461.8 true=0.8944 env_valid=1 kappa=0.000605 total 4s
+
+================================================================================
+== linear_n50_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.05344 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.497e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=465.5 true=0.7051 env_valid=1 kappa=0.000602 total 4s
+
+================================================================================
+== linear_n50_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.005264 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.5e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=463.5 true=0.7447 env_valid=1 kappa=0.000606 total 4s
+
+================================================================================
+== linear_n50_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.004539 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.535e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=472.1 true=0.7803 env_valid=1 kappa=0.00058 total 4s
+
+================================================================================
+== linear_n50_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.001985 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.481e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=460.6 true=0.783 env_valid=1 kappa=0.000603 total 4s
+
+================================================================================
+== linear_n5_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.001537 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.641e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=457.3 true=1.198 env_valid=1 kappa=0.000627 total 3s
+
+================================================================================
+== linear_n5_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.03134 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.49e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=452.5 true=1.532 env_valid=1 kappa=0.000629 total 3s
+
+================================================================================
+== linear_n5_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.004725 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.533e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=469.3 true=1.584 env_valid=1 kappa=0.000606 total 3s
+
+================================================================================
+== linear_n5_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.005763 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.492e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=470.2 true=1.17 env_valid=1 kappa=0.000559 total 3s
+
+================================================================================
+== linear_n5_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=0.001566 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=nan tailmaxV=1.48e-06 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=469.3 true=1.235 env_valid=1 kappa=0.000611 total 3s

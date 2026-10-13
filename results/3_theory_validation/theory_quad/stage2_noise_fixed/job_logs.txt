@@ -1,0 +1,263 @@
+
+================================================================================
+== sig0.1_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.093 tailmaxV=0.002233 tau_hat=0.004017 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.003313 tau_hat=0.004017 c=0.6597 (2s)
+  delta_c env=3.667 true=0.1978 env_valid=1 kappa=0.000583 total 4s
+
+================================================================================
+== sig0.1_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.020 tailmaxV=0.04959 tau_hat=0.004154 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.004054 tau_hat=0.004154 c=0.6597 (2s)
+  delta_c env=3.704 true=0.08849 env_valid=1 kappa=0.000576 total 4s
+
+================================================================================
+== sig0.1_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.059 tailmaxV=0.005374 tau_hat=0.004475 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0179 tau_hat=0.004475 c=0.6597 (2s)
+  delta_c env=3.68 true=0.07583 env_valid=1 kappa=0.000585 total 4s
+
+================================================================================
+== sig0.1_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.065 tailmaxV=0.00385 tau_hat=0.004819 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.005328 tau_hat=0.004819 c=0.6597 (2s)
+  delta_c env=3.745 true=0.1307 env_valid=1 kappa=0.000562 total 4s
+
+================================================================================
+== sig0.1_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.091 tailmaxV=0.002034 tau_hat=0.005279 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01108 tau_hat=0.005279 c=0.6597 (2s)
+  delta_c env=3.665 true=0.2047 env_valid=1 kappa=0.000577 total 4s
+
+================================================================================
+== sig0.2_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.082 tailmaxV=0.002294 tau_hat=0.007805 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.02693 tau_hat=0.007805 c=0.6597 (2s)
+  delta_c env=4.836 true=0.3347 env_valid=1 kappa=0.000583 total 4s
+
+================================================================================
+== sig0.2_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.017 tailmaxV=0.04959 tau_hat=0.00748 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.003959 tau_hat=0.00748 c=0.6597 (2s)
+  delta_c env=4.887 true=0.1204 env_valid=1 kappa=0.000576 total 4s
+
+================================================================================
+== sig0.2_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.052 tailmaxV=0.005039 tau_hat=0.009906 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.005598 tau_hat=0.009906 c=0.6597 (2s)
+  delta_c env=4.853 true=0.1396 env_valid=1 kappa=0.000585 total 4s
+
+================================================================================
+== sig0.2_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.055 tailmaxV=0.004301 tau_hat=0.009906 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01065 tau_hat=0.009906 c=0.6597 (2s)
+  delta_c env=4.936 true=0.2211 env_valid=1 kappa=0.000562 total 4s
+
+================================================================================
+== sig0.2_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.082 tailmaxV=0.001848 tau_hat=0.01175 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.007028 tau_hat=0.01175 c=0.6597 (2s)
+  delta_c env=4.834 true=0.405 env_valid=1 kappa=0.000577 total 4s
+
+================================================================================
+== sig0.5_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.052 tailmaxV=0.002505 tau_hat=0.05732 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.02804 tau_hat=0.05732 c=0.6597 (2s)
+  delta_c env=8.34 true=0.7459 env_valid=1 kappa=0.000583 total 4s
+
+================================================================================
+== sig0.5_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.011 tailmaxV=0.04965 tau_hat=0.03463 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.007651 tau_hat=0.03463 c=0.6597 (2s)
+  delta_c env=8.436 true=0.2285 env_valid=1 kappa=0.000576 total 4s
+
+================================================================================
+== sig0.5_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.039 tailmaxV=0.004191 tau_hat=0.2542 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01905 tau_hat=0.2542 c=0.6597 (2s)
+  delta_c env=8.372 true=0.3709 env_valid=1 kappa=0.000585 total 4s
+
+================================================================================
+== sig0.5_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.030 tailmaxV=0.006432 tau_hat=0.1178 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.01281 tau_hat=0.1178 c=0.6597 (2s)
+  delta_c env=8.508 true=0.5082 env_valid=1 kappa=0.000562 total 4s
+
+================================================================================
+== sig0.5_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.065 tailmaxV=0.001504 tau_hat=0.1091 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.009574 tau_hat=0.1091 c=0.6597 (2s)
+  delta_c env=8.341 true=1.018 env_valid=1 kappa=0.000577 total 4s
+
+================================================================================
+== sig0_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.105 tailmaxV=0.002175 tau_hat=0.001731 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.004458 tau_hat=0.001731 c=0.6597 (2s)
+  delta_c env=2.499 true=0.06263 env_valid=1 kappa=0.000583 total 4s
+
+================================================================================
+== sig0_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.024 tailmaxV=0.0496 tau_hat=0.001914 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.004187 tau_hat=0.001914 c=0.6597 (2s)
+  delta_c env=2.522 true=0.06396 env_valid=1 kappa=0.000576 total 4s
+
+================================================================================
+== sig0_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.068 tailmaxV=0.00574 tau_hat=0.001846 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.002206 tau_hat=0.001846 c=0.6597 (2s)
+  delta_c env=2.507 true=0.06301 env_valid=1 kappa=0.000585 total 4s
+
+================================================================================
+== sig0_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.078 tailmaxV=0.003476 tau_hat=0.001914 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.005398 tau_hat=0.001914 c=0.6597 (2s)
+  delta_c env=2.555 true=0.06528 env_valid=1 kappa=0.000562 total 4s
+
+================================================================================
+== sig0_s4
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.102 tailmaxV=0.002282 tau_hat=0.001982 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.006171 tau_hat=0.001982 c=0.6597 (2s)
+  delta_c env=2.496 true=0.06299 env_valid=1 kappa=0.000577 total 4s
+
+================================================================================
+== sig1_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.021 tailmaxV=0.002975 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0931 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=14.18 true=1.432 env_valid=1 kappa=0.000583 total 4s
+
+================================================================================
+== sig1_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.007 tailmaxV=0.04992 tau_hat=0.6009 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.04451 tau_hat=0.6009 c=0.6597 (2s)
+  delta_c env=14.35 true=0.4209 env_valid=1 kappa=0.000576 total 4s
+
+================================================================================
+== sig1_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.029 tailmaxV=0.003164 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.08065 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=14.24 true=0.7647 env_valid=1 kappa=0.000585 total 4s
+
+================================================================================
+== sig1_s3
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.008 tailmaxV=0.01999 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.02055 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=14.46 true=0.9936 env_valid=1 kappa=0.000562 total 4s
+
+================================================================================
+== sig1_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.041 tailmaxV=0.001249 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.009408 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=14.19 true=2.042 env_valid=1 kappa=0.000577 total 4s
+
+================================================================================
+== sig2_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.068 tailmaxV=0.004864 tau_hat=0.6584 c=0.6597 (2s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=0.97 safe_V=0.97 cert_frac=1.000 tailmaxV=0.0191 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=25.86 true=2.804 env_valid=1 kappa=0.000583 total 4s
+
+================================================================================
+== sig2_s1
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.025 tailmaxV=0.05086 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.03858 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=26.18 true=0.8125 env_valid=1 kappa=0.000576 total 4s
+
+================================================================================
+== sig2_s2
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.340 tailmaxV=0.001955 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=0.97 cert_frac=1.000 tailmaxV=1.171 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=25.97 true=1.555 env_valid=1 kappa=0.000585 total 4s
+
+================================================================================
+== sig2_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=0.17 cert_frac=0.011 tailmaxV=2.87 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.05811 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=26.37 true=1.967 env_valid=1 kappa=0.000562 total 4s
+
+================================================================================
+== sig2_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.194 tailmaxV=0.001099 tau_hat=0.6553 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.1736 tau_hat=0.6553 c=0.6597 (2s)
+  delta_c env=25.88 true=4.093 env_valid=1 kappa=0.000577 total 4s
+
+================================================================================
+== sig4_s0
+================================================================================
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.750 tailmaxV=0.1472 tau_hat=0.6584 c=0.6597 (2s)
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0002958 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=49.23 true=5.547 env_valid=1 kappa=0.000583 total 4s
+
+================================================================================
+== sig4_s1
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.021 tailmaxV=0.05373 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0006248 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=49.83 true=1.598 env_valid=1 kappa=0.000576 total 4s
+
+================================================================================
+== sig4_s2
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.116 tailmaxV=0.0009504 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0007036 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=49.42 true=3.136 env_valid=1 kappa=0.000585 total 4s
+
+================================================================================
+== sig4_s3
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=0.93 safe_V=0.93 cert_frac=0.000 tailmaxV=7.178 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0004297 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=50.18 true=3.916 env_valid=1 kappa=0.000562 total 4s
+
+================================================================================
+== sig4_s4
+================================================================================
+/Users/linmuyi/code/.venv/lib/python3.14/site-packages/diffcp/cone_program.py:442: UserWarning: Solved/Inaccurate.
+  warnings.warn("Solved/Inaccurate.")
+  qp                safe_box=1.00 safe_V=1.00 cert_frac=0.000 tailmaxV=0.001119 tau_hat=0.6584 c=0.6597 (2s)
+  qp_filter         safe_box=1.00 safe_V=1.00 cert_frac=1.000 tailmaxV=0.0008987 tau_hat=0.6584 c=0.6597 (2s)
+  delta_c env=49.26 true=8.196 env_valid=1 kappa=0.000577 total 4s

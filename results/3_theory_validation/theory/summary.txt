@@ -1,0 +1,34 @@
+== Stage 0 (1-D) ==
+  Prop 3(a) grid tau_hat vs formula: max relative error 2.00e-04 (expect ~0)
+  Prop 3(b) min limV/tau_hat: 0.360 (expect >= 0.25)
+  Prop 7 slope of mean limsup V vs N: -1.00 (expect -1)
+  Prop 7 mean >= lower bound at every N: True
+  Prop 7 min fraction below upper bound: 1.000 (expect >= 0.9)
+
+== Configs skipped because V had no safe sublevel set around the goal ==
+  stage2_noise_fixed         9
+  stage3_samples_fixed       7
+  stage6_misspec_fixed       12
+
+== Envelope validity (Prop. 5): fraction of configs where |f - f_hat| <= r_N on the whole grid ==
+  stage2_noise_fixed         1.000 over 26 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage3_samples_fixed       1.000 over 28 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage6_misspec_fixed       1.000 over 48 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage7_eiv_fixed           0.000 over 15 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+
+== Theorem 2: tau_hat <= tau_delta whenever lambda_bar > lambda and the envelope is valid ==
+
+== Theorem 1 (ideal form): with a filter, tau_hat < c should imply safety ==
+  qp                predicted-safe configs: 117; of these fully safe (V<c always): 0.521; min cert_frac 0.000; median excess over max(e^-lt V0, tau_hat): 0.00e+00; limsup<=tau_hat in 0.966
+  qp_filter         predicted-safe configs: 117; of these fully safe (V<c always): 0.103; min cert_frac 1.000; median excess over max(e^-lt V0, tau_hat): 1.55e-02; limsup<=tau_hat in 0.923
+  configs where the SAMPLED-DATA form of Thm 1 is non-vacuous: 0 of 234 (expected ~0 at h = 0.05; plan item TH12)
+
+== Cor 6 rates (stage 3, fixed V) ==
+  slope delta_c(env) vs N: -0.47 (expect about -0.5, up to log N)
+  slope delta_c(true) vs N: -0.53
+  slope tau_hat vs N: -0.00 (expect about -1 once tau_hat > 0)
+  stage 6 bias  : true error at smallest/largest N: 1.08 -> 0.125 (linear lib should plateau at the misspecification floor)
+  stage 6 linear: true error at smallest/largest N: 1.07 -> 0.17 (linear lib should plateau at the misspecification floor)
+
+== Thm 2 rate (stage 2, fixed V) ==
+  slope tau_hat vs delta_c(env), configs with tau_hat < c/4: nan (expect about 2; Thm 2 is an upper bound, so faster decay is allowed)

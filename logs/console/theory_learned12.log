@@ -1,0 +1,144 @@
+================================================================
+ theory experiments   Sun Oct 11 13:29:40 PDT 2026
+   python      /Users/linmuyi/code/.venv/bin/python
+   workers     13 x 1 threads
+   accelerator cpu   gpus: none
+   stages      12 8
+   seeds       0 1 2 3 4
+   policies    qp qp_filter
+   output      data/theory_learned
+================================================================
+
+=== stage12_diffusion_matched:       25 jobs, 13 workers (Sun Oct 11 13:29:40 PDT 2026) ===
+[start 13:29:40] stage12_diffusion_matched/diffm_sig0_s0 (cuda=-1)
+[start 13:29:40] stage12_diffusion_matched/diffm_sig0_s2 (cuda=-1)
+[start 13:29:40] stage12_diffusion_matched/diffm_sig0.5_s2 (cuda=-1)
+[start 13:29:40] stage12_diffusion_matched/diffm_sig0.2_s2 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0.2_s3 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0.2_s4 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0_s1 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0.5_s0 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0.2_s1 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0.2_s0 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0_s4 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0_s3 (cuda=-1)
+[start 13:29:41] stage12_diffusion_matched/diffm_sig0.5_s1 (cuda=-1)
+[done  13:33:20] stage12_diffusion_matched/diffm_sig0_s2 (220s)
+[start 13:33:20] stage12_diffusion_matched/diffm_sig0.5_s3 (cuda=-1)
+[done  13:33:23] stage12_diffusion_matched/diffm_sig0_s1 (222s)
+[start 13:33:23] stage12_diffusion_matched/diffm_sig0.5_s4 (cuda=-1)
+[done  13:33:23] stage12_diffusion_matched/diffm_sig0.2_s4 (222s)
+[start 13:33:24] stage12_diffusion_matched/diffm_sig1_s0 (cuda=-1)
+[done  13:33:24] stage12_diffusion_matched/diffm_sig0.5_s1 (223s)
+[start 13:33:24] stage12_diffusion_matched/diffm_sig1_s1 (cuda=-1)
+[done  13:33:24] stage12_diffusion_matched/diffm_sig0_s4 (223s)
+[start 13:33:24] stage12_diffusion_matched/diffm_sig1_s2 (cuda=-1)
+[done  13:33:25] stage12_diffusion_matched/diffm_sig0.5_s2 (225s)
+[start 13:33:25] stage12_diffusion_matched/diffm_sig1_s3 (cuda=-1)
+[done  13:33:26] stage12_diffusion_matched/diffm_sig0.2_s0 (225s)
+[start 13:33:26] stage12_diffusion_matched/diffm_sig1_s4 (cuda=-1)
+[done  13:33:26] stage12_diffusion_matched/diffm_sig0.2_s2 (226s)
+[start 13:33:26] stage12_diffusion_matched/diffm_sig2_s0 (cuda=-1)
+[done  13:33:26] stage12_diffusion_matched/diffm_sig0.2_s3 (225s)
+[start 13:33:26] stage12_diffusion_matched/diffm_sig2_s1 (cuda=-1)
+[done  13:34:19] stage12_diffusion_matched/diffm_sig0.2_s1 (278s)
+[start 13:34:19] stage12_diffusion_matched/diffm_sig2_s2 (cuda=-1)
+[done  13:34:59] stage12_diffusion_matched/diffm_sig0_s3 (318s)
+[done  13:34:59] stage12_diffusion_matched/diffm_sig0.5_s0 (318s)
+[start 13:34:59] stage12_diffusion_matched/diffm_sig2_s3 (cuda=-1)
+[start 13:34:59] stage12_diffusion_matched/diffm_sig2_s4 (cuda=-1)
+[done  13:34:59] stage12_diffusion_matched/diffm_sig0_s0 (319s)
+[done  13:37:14] stage12_diffusion_matched/diffm_sig0.5_s3 (234s)
+[done  13:37:15] stage12_diffusion_matched/diffm_sig1_s0 (231s)
+[done  13:37:15] stage12_diffusion_matched/diffm_sig0.5_s4 (232s)
+[done  13:37:16] stage12_diffusion_matched/diffm_sig1_s1 (232s)
+[done  13:37:16] stage12_diffusion_matched/diffm_sig1_s2 (232s)
+[done  13:37:17] stage12_diffusion_matched/diffm_sig1_s3 (232s)
+[done  13:37:17] stage12_diffusion_matched/diffm_sig2_s0 (231s)
+[done  13:37:18] stage12_diffusion_matched/diffm_sig2_s1 (232s)
+[done  13:37:18] stage12_diffusion_matched/diffm_sig1_s4 (232s)
+[done  13:37:54] stage12_diffusion_matched/diffm_sig2_s2 (215s)
+[done  13:38:20] stage12_diffusion_matched/diffm_sig2_s3 (201s)
+[done  13:38:21] stage12_diffusion_matched/diffm_sig2_s4 (202s)
+merged 50 rows from data/theory_learned/stage12_diffusion_matched/parts -> data/theory_learned/stage12_diffusion_matched.csv
+=== stage12_diffusion_matched finished: 25 ok,        0 failed (Sun Oct 11 13:38:21 PDT 2026) ===
+
+=== stage8_report (Sun Oct 11 13:38:21 PDT 2026) ===
+
+== Configs skipped because V had no safe sublevel set around the goal ==
+
+== Envelope validity (Prop. 5): fraction of configs where |f - f_hat| <= r_N on the whole grid ==
+  stage2_noise_fixed         1.000 over 35 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage3_samples_fixed       1.000 over 35 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage6_misspec_fixed       1.000 over 60 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage7_eiv_fixed           0.000 over 15 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage10_cert_arms          1.000 over 50 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage11_diffusion          1.000 over 25 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+  stage12_diffusion_matched  1.000 over 25 configs (theory: >= 0.9 when noise_on=xdot; stage7 is outside the theory)
+
+== Theorem 2: tau_hat <= tau_delta whenever lambda_bar > lambda and the envelope is valid ==
+  stage2_noise_fixed         holds in 1.000 of 35 applicable configs (theory: 1.000)
+  stage3_samples_fixed       holds in 1.000 of 35 applicable configs (theory: 1.000)
+  stage6_misspec_fixed       holds in 1.000 of 60 applicable configs (theory: 1.000)
+  stage10_cert_arms          holds in 1.000 of 47 applicable configs (theory: 1.000)
+  stage11_diffusion          holds in 1.000 of 25 applicable configs (theory: 1.000)
+  stage12_diffusion_matched  holds in 1.000 of 25 applicable configs (theory: 1.000)
+
+== Theorem 1 (ideal form): with a filter, tau_hat < c should imply safety ==
+  (excluded: 30 rows whose envelope missed the true error; of the 30 'predicted safe' among them, fully safe 0.333)
+  qp                predicted-safe configs: 180; of these fully safe (V<c always): 0.994; min cert_frac 0.000; median excess over max(e^-lt V0, tau_hat): 0.00e+00; limsup<=tau_hat in 0.978
+  qp_filter         predicted-safe configs: 180; of these fully safe (V<c always): 0.878; min cert_frac 1.000; median excess over max(e^-lt V0, tau_hat): 0.00e+00; limsup<=tau_hat in 0.961
+  diffusion         predicted-safe configs:  50; of these fully safe (V<c always): 0.840; min cert_frac 0.094; median excess over max(e^-lt V0, tau_hat): 8.68e-02; limsup<=tau_hat in 0.480
+  diffusion_filter  predicted-safe configs:  50; of these fully safe (V<c always): 0.940; min cert_frac 1.000; median excess over max(e^-lt V0, tau_hat): 3.69e-02; limsup<=tau_hat in 0.400
+  configs where the SAMPLED-DATA form of Thm 1 is non-vacuous: 0 of 460 (expected ~0 at h = 0.05; plan item TH12)
+
+== Cor 6 rates (stage 3, fixed V) ==
+  slope delta_c(env) vs N: -0.47 (expect about -0.5, up to log N)
+  slope delta_c(true) vs N: -0.58
+  slope tau_hat vs N: -1.60 (expect about -1 once tau_hat > 0)
+  stage 6 bias  : true error at smallest/largest N: 1.27 -> 0.131 (linear lib should plateau at the misspecification floor)
+  stage 6 linear: true error at smallest/largest N: 1.56 -> 1.14 (linear lib should plateau at the misspecification floor)
+
+== Thm 2 rate (stage 2, fixed V) ==
+  slope tau_hat vs delta_c(env), configs with tau_hat < c/4: 2.47 (expect about 2; Thm 2 is an upper bound, so faster decay is allowed)
+
+== Stage 10: certificate trained on f_hat alone (nominal) vs with the envelope (robust) ==
+  arm             sigma  lam_bar  tau_hat/c  omega_frac  safe(qp)  safe(filter)
+  learned_nominal     0    0.857     0.9845      0.0148     1.000         1.000
+  learned_nominal   0.2    1.081     0.9978      0.0376     1.000         0.987
+  learned_nominal   0.5    0.813     0.9986      0.0794     1.000         0.933
+  learned_nominal     1    0.766     0.9994      0.1539     1.000         0.913
+  learned_nominal     2    0.855     0.9996      0.3010     1.000         0.973
+  learned_robust      0    1.431     0.0032      0.0000     1.000         1.000
+  learned_robust    0.2    1.664     0.0157      0.0015     1.000         1.000
+  learned_robust    0.5    1.926     0.0165      0.0016     1.000         1.000
+  learned_robust      1    2.668     0.0199      0.0045     1.000         1.000
+  learned_robust      2    2.392     0.9199      0.0646     1.000         0.773
+
+== stage11_diffusion: diffusion sampler guided by the learned certificate (sampler control set +-1000) ==
+  diffusion         sigma=0: tau_hat/c 0.0008, safe 1.000, cert_frac 0.759, tail V/c 0.5358
+  diffusion         sigma=0.2: tau_hat/c 0.0017, safe 0.993, cert_frac 0.756, tail V/c 0.7471
+  diffusion         sigma=0.5: tau_hat/c 0.0165, safe 1.000, cert_frac 0.744, tail V/c 0.5745
+  diffusion         sigma=1: tau_hat/c 0.9988, safe 0.987, cert_frac 0.734, tail V/c 0.6022
+  diffusion         sigma=2: tau_hat/c 0.9996, safe 0.980, cert_frac 0.627, tail V/c 0.5078
+  diffusion_filter  sigma=0: tau_hat/c 0.0008, safe 1.000, cert_frac 1.000, tail V/c 0.4136
+  diffusion_filter  sigma=0.2: tau_hat/c 0.0017, safe 1.000, cert_frac 1.000, tail V/c 0.3320
+  diffusion_filter  sigma=0.5: tau_hat/c 0.0165, safe 0.993, cert_frac 1.000, tail V/c 0.3832
+  diffusion_filter  sigma=1: tau_hat/c 0.9988, safe 1.000, cert_frac 1.000, tail V/c 0.3207
+  diffusion_filter  sigma=2: tau_hat/c 0.9996, safe 0.993, cert_frac 1.000, tail V/c 0.3175
+
+== stage12_diffusion_matched: diffusion sampler guided by the learned certificate (sampler control set matched to U) ==
+  diffusion         sigma=0: tau_hat/c 0.0008, safe 1.000, cert_frac 0.728, tail V/c 0.0025
+  diffusion         sigma=0.2: tau_hat/c 0.0017, safe 1.000, cert_frac 0.665, tail V/c 0.0025
+  diffusion         sigma=0.5: tau_hat/c 0.0165, safe 1.000, cert_frac 0.572, tail V/c 0.0026
+  diffusion         sigma=1: tau_hat/c 0.9988, safe 1.000, cert_frac 0.425, tail V/c 0.0026
+  diffusion         sigma=2: tau_hat/c 0.9996, safe 0.913, cert_frac 0.134, tail V/c 0.0025
+  diffusion_filter  sigma=0: tau_hat/c 0.0008, safe 1.000, cert_frac 1.000, tail V/c 0.0124
+  diffusion_filter  sigma=0.2: tau_hat/c 0.0017, safe 1.000, cert_frac 1.000, tail V/c 0.0091
+  diffusion_filter  sigma=0.5: tau_hat/c 0.0165, safe 1.000, cert_frac 1.000, tail V/c 0.0420
+  diffusion_filter  sigma=1: tau_hat/c 0.9988, safe 1.000, cert_frac 1.000, tail V/c 0.0167
+  diffusion_filter  sigma=2: tau_hat/c 0.9996, safe 0.993, cert_frac 1.000, tail V/c 0.0396
+
+figures and summary.txt written to figures/theory_learned
+
+ALL REQUESTED STAGES FINISHED Sun Oct 11 13:38:22 PDT 2026

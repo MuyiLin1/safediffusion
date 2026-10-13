@@ -1,0 +1,5 @@
+0 ref_s0 1 --mode train_ref --ref_v data/theory_nn_nobarrier/ref_v/ref_seed0.pt --seed 0 --num_trajectories 200 --max_epochs 10 --no_barrier
+1 ref_s1 1 --mode train_ref --ref_v data/theory_nn_nobarrier/ref_v/ref_seed1.pt --seed 1 --num_trajectories 200 --max_epochs 10 --no_barrier
+2 ref_s2 1 --mode train_ref --ref_v data/theory_nn_nobarrier/ref_v/ref_seed2.pt --seed 2 --num_trajectories 200 --max_epochs 10 --no_barrier
+3 ref_s3 1 --mode train_ref --ref_v data/theory_nn_nobarrier/ref_v/ref_seed3.pt --seed 3 --num_trajectories 200 --max_epochs 10 --no_barrier
+4 ref_s4 1 --mode train_ref --ref_v data/theory_nn_nobarrier/ref_v/ref_seed4.pt --seed 4 --num_trajectories 200 --max_epochs 10 --no_barrier

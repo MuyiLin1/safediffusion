@@ -1,0 +1,5 @@
+0 cert_s0 0 --mode train_cert --cert_file data/theory_learned/cert/cert_seed0.pt --library bias --sigma 0.5 --seed 0 --num_trajectories 50 --cert_steps 3000
+1 cert_s1 0 --mode train_cert --cert_file data/theory_learned/cert/cert_seed1.pt --library bias --sigma 0.5 --seed 1 --num_trajectories 50 --cert_steps 3000
+2 cert_s2 0 --mode train_cert --cert_file data/theory_learned/cert/cert_seed2.pt --library bias --sigma 0.5 --seed 2 --num_trajectories 50 --cert_steps 3000
+3 cert_s3 0 --mode train_cert --cert_file data/theory_learned/cert/cert_seed3.pt --library bias --sigma 0.5 --seed 3 --num_trajectories 50 --cert_steps 3000
+4 cert_s4 0 --mode train_cert --cert_file data/theory_learned/cert/cert_seed4.pt --library bias --sigma 0.5 --seed 4 --num_trajectories 50 --cert_steps 3000
